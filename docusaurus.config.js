@@ -14,7 +14,7 @@ const config = {
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
   url: 'https://www.notes.aandradeb.com',
-  baseUrl: '/notepedia-website/',
+  baseUrl: '/',
   organizationName: 'peek4bUh', 
   projectName: 'notepedia-website', 
   onBrokenLinks: 'throw',
