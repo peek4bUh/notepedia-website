@@ -89,8 +89,6 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
-
-    plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
 };
 
 export default config;
