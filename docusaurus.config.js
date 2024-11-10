@@ -65,12 +65,17 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
+	  {
+	    to: 'blog',
+	    position: 'left',
+	    label: 'Blog',
+	  },
+	  {
+	    href: "https://github.com/peek4bUh/notepedia-website",
+	    position: "right",
+	    className: "header-github-link",
+	    "aria-label": "GitHub repository",
+	  },
         ],
       },
 
