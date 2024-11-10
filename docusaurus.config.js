@@ -13,7 +13,7 @@ const config = {
   title: 'My Site',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
-  url: 'http://www.notes.aandradeb.com',
+  url: 'https://www.notes.aandradeb.com',
   baseUrl: '/notepedia-website/',
   organizationName: 'peek4bUh', 
   projectName: 'notepedia-website', 
