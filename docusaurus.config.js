@@ -70,6 +70,11 @@ const config = {
 	    position: 'left',
 	    label: 'Blog',
 	  },
+          {
+            href: 'http://www.aandradeb.com/',
+            label: 'Portfolio',
+	    position: 'left',
+          },
 	  {
 	    href: "https://github.com/peek4bUh/notepedia-website",
 	    position: "right",
@@ -77,6 +82,12 @@ const config = {
 	    "aria-label": "GitHub repository",
 	  },
         ],
+      },
+
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
       },
 
       footer: {
