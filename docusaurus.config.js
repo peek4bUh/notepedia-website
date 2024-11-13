@@ -92,7 +92,7 @@ const config = {
 
       footer: {
         style: 'dark',
-        copyright: `Created with ♥ by Docusaurus`,
+        copyright: `Created with ♥ by <a href="https://github.com/facebook/docusaurus">Docusaurus</a> `,
       },
 
       prism: {
