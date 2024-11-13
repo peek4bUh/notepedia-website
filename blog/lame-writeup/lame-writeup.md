@@ -10,9 +10,9 @@ date: 06 Nov 2024
 
 # Lame Write-Up
 
-Lame is a very basic machine from the [Beginner Track](https://app.hackthebox.com/tracks/Beginner-Track) track to start getting familiar with the main tools of pentesting.
-
 ![Lame Overview](./lame-overview.png)
+
+Lame is a very basic machine from the [Beginner Track](https://app.hackthebox.com/tracks/Beginner-Track) track to start getting familiar with the main tools of pentesting.
 
 <!-- truncate -->
 
