@@ -10,24 +10,11 @@ date: 06 Nov 2024
 
 # Lame Write-Up
 
+Lame is a very basic machine from the [Beginner Track](https://app.hackthebox.com/tracks/Beginner-Track) track to start getting familiar with the main tools of pentesting.
+
 ![Lame Overview](./lame-overview.png)
 
-This HackTheBox machine is aimed to practice the following:
-
-- nmap
-- netcat
-
 <!-- truncate -->
-
-## Box Info
-
-```
-Machine      : Lame
-OS           : Linux
-Release date : 14, March 2017
-IP address   : 10.129.143.253
-Dificulty    : Easy
-```
 
 ## Recon
 
