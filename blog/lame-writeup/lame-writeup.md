@@ -1,11 +1,12 @@
 ---
+authors: [peek4bUh]
+date: 2024-11-06
 language: english
 noteType: area
 skills: "nmap, netcat"
 status: draft
 tags: [hackthebox, writeup]
 title: Lame Write-Up
-date: 06 Nov 2024
 ---
 
 # Lame Write-Up
