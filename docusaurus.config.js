@@ -61,9 +61,9 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'wikiSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Wiki',
           },
 	  {
 	    to: 'blog',
