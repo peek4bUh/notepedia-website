@@ -10,16 +10,16 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
+  title: 'Notepedia',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
   url: 'https://www.notes.aandradeb.com',
   baseUrl: '/',
   organizationName: 'peek4bUh', 
   projectName: 'notepedia-website', 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-  i18n: { defaultLocale: 'en', locales: ['en', 'es'], },
+  i18n: { defaultLocale: 'en', locales: ['en'], },
 
   presets: [
     [
