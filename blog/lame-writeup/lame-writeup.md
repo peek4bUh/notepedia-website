@@ -1,5 +1,4 @@
 ---
-authors: [peek4bUh]
 date: 2024-11-06
 language: english
 noteType: area
