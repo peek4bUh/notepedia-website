@@ -97,6 +97,10 @@ const config = {
       },
 
       prism: {
+        additionalLanguages: [
+          'java',
+          'bash',
+        ],
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
