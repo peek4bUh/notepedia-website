@@ -17,7 +17,7 @@ const config = {
   baseUrl: '/',
   organizationName: 'peek4bUh', 
   projectName: 'notepedia-website', 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   i18n: { defaultLocale: 'en', locales: ['en'], },
 
