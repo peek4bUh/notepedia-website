@@ -17,7 +17,7 @@ const config = {
   baseUrl: '/',
   organizationName: 'peek4bUh', 
   projectName: 'notepedia-website', 
-  onBrokenLinks: 'warn',
+  onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   i18n: { defaultLocale: 'en', locales: ['en'], },
 
@@ -27,6 +27,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+	  routeBasePath: '/',
           sidebarPath: './sidebars.js',
         },
         blog: {
@@ -61,9 +62,9 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'wikiSidebar',
+            sidebarId: 'homeSidebar',
             position: 'left',
-            label: 'Wiki',
+            label: 'Home',
           },
 	  {
 	    to: 'blog',
