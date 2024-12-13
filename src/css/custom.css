@@ -5,30 +5,46 @@
  */
 
 /* You can override the default Infima variables here. */
+
+/**
+Define default colors below and colors for dark mode below it.
+ */
+
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+    /* Docusaurus themeing */
+    --ifm-font-family-monospace: 'Fira Code', ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --font-code: var(--ifm-font-family-monospace) !important;
+    --font-mono: var(--ifm-font-family-monospace) !important;
+
+    --font-ui: 'Source Sans', ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-prose: var(--font-ui);
+
+    --ifm-heading-font-family: var(--font-ui);
+    --ifm-background-color: #ffffff;
+    --ifm-toc-border-color: var(--docs-color-border);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+html[data-theme='dark'] {
+    
+    --ifm-link-color: #79a9ec;
+
+    --ifm-menu-color: #cccccc;
+    --ifm-color-primary: #eeefff;
+
+    --ifm-background-color: #202020;
+    --ifm-background-surface-color: #2c2c2c;
+
+    --ifm-heading-color: #dfdfdf;
+    --ifm-font-color-base: #f5f5f7;
 }
 
+html[data-theme='dark'] code {
+  background-color: var(--ifm-background-surface-color);
+}
 
 .header-github-link:hover {
     opacity: 0.6;
@@ -48,3 +64,32 @@ html[data-theme='dark'] .header-github-link:before {
     no-repeat;
 }
 
+.menu > .menu__list > .menu__list-item:first-child {
+    margin-top: 16px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.thin-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.thin-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+div[class^='sidebar_'] .menu__link.menu__link--active:not(.menu__link--sublist) {
+  border-radius: 4px 0 0 4px;
+  border-right: 2px solid var(--ifm-menu-color);
+  color: var(--ifm-color-primary);
+  background: var(--ifm-menu-color-background-hover);
+}
+
+.menu__link--sublist::after {
+  background: var(--ifm-menu-link-sublist-icon) 50% / 1.25rem 1.25rem;
+}
+
+.clean-btn {
+  border-radius: .375rem!important;
+}
