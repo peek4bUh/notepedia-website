@@ -1,7 +1,7 @@
 ---
 draft: "false"
 language: english
-parent: "[computing-moc](computing-moc.md)"
+parent: "computing-moc"
 status: ready
 tags: [wiki]
 title: Bash
@@ -9,7 +9,7 @@ title: Bash
 
 # Bash
 
-**Bash** is the shell, or [command language interpreter](command%20language%20interpreter), for the **GNU** [Operating System](Operating%20System). The name is an acronym for the "**B**ourne-**A**gain **Sh**ell", a pun on Stephen Bourne, the author of the direct ancestor of the current Unix shell sh.
+**Bash** is the shell, or command language interpreter, for the **GNU** Operating System. The name is an acronym for the "**B**ourne-**A**gain **Sh**ell", a pun on Stephen Bourne, the author of the direct ancestor of the current Unix shell sh.
 
 ## References
 
