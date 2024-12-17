@@ -31,5 +31,5 @@ ln -sf <𝗡𝗘𝗪_𝗙𝗜𝗟𝗘_𝗣𝗔𝗧𝗛> <𝗦𝗬𝗠𝗟𝗜�
 
 ## See Also
 
-- [Hard Link](hard-link.md)
-- [Soft Link](soft-link.md)
+- Hard Link
+- Soft Link

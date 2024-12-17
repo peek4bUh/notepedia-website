@@ -30,5 +30,5 @@ gobuster vhost -w <𝗪𝗢𝗥𝗗𝗟𝗜𝗦𝗧_𝗣𝗔𝗧𝗛> -u <𝗜�
 
 ## See Also
 
-- [wfuzz](wfuzz)
-- [feroxbuster](feroxbuster)
+- wfuzz
+- feroxbuster
