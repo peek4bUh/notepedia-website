@@ -1,7 +1,7 @@
 ---
 draft: "false"
 language: english
-parent: "[Computing MOC](computing-moc.md)"
+parent: "Computing MOC"
 status: ready
 tags: [wiki]
 title: Relative Pathname
@@ -17,25 +17,25 @@ The single dot (`.`) notation refers to the working directory.
 
 Here is an example, you can change the working directory from `/usr` to `/usr/bin` in two different ways, either using an [absolute pathname](absolute-pathname.md):
 
-```
-[me@linuxbox usr]$ cd /usr/bin
-[me@linuxbox bin]$ pwd
+```bash
+[tux@linuxbox usr]$ cd /usr/bin
+[tux@linuxbox bin]$ pwd
 /usr/bin
 ```
 
 Or using the **relative pathname**.
 
-```
-[me@linuxbox usr]$ cd ./bin
-[me@linuxbox bin]$ pwd
+```bash
+[tux@linuxbox usr]$ cd ./bin
+[tux@linuxbox bin]$ pwd
 /usr/bin
 ```
 
 > [!note]
 > In almost all cases, you can omit the `./` part because it is implied. Typing the following does the same thing:
 >
-> ```
-> [me@linuxbox usr]$ cd bin
+> ```bash
+> [tux@linuxbox usr]$ cd bin
 > ```
 
 ## The Double Dot Notation
@@ -44,17 +44,17 @@ The double dot (`..`) notation refers to the working directory's parent.
 
 Here is an example, let's change the working directory to `/usr/bin`:
 
-```
-[me@linuxbox ~]$ cd /usr/bin
-[me@linuxbox bin]$ pwd
+```bash
+[tux@linuxbox ~]$ cd /usr/bin
+[tux@linuxbox bin]$ pwd
 /usr/bin
 ```
 
 Now let's say that you wanted to change the working directory to the parent of `/usr/bin`, which is `/usr` you can use the `..` notation.
 
-```
-[me@linuxbox bin]$ cd ..
-[me@linuxbox usr]$ pwd
+```bash
+[tux@linuxbox bin]$ cd ..
+[tux@linuxbox usr]$ pwd
 /usr
 ```
 
