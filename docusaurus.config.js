@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Notepedia',
   tagline: 'Dinosaurs are cool',
-  favicon: 'img/notepedia.ico',
+  favicon: 'notepedia.ico',
   url: 'https://www.notes.aandradeb.com',
   baseUrl: '/',
   organizationName: 'peek4bUh', 
@@ -54,7 +54,7 @@ const config = {
         title: 'Notepedia',
         logo: {
           alt: 'Notepedia Logo',
-          src: 'img/logo.svg',
+          src: 'logo.svg',
         },
         items: [
           {
