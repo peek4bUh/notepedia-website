@@ -1,7 +1,7 @@
 ---
 date: 2025-01-22
 difficulty: easy
-draft: "true"
+draft: "false"
 os: linux
 skills: nmap, netcat, reverse shell, telnet, ssh
 tags: [tryhackme, writeup]
