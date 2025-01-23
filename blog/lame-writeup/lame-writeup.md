@@ -20,7 +20,7 @@ Lame is a very basic machine from the [Beginner Track](https://app.hackthebox.co
 
 ### nmap
 
-[[nmap]] finds four open TCP ports, FTP (21), SSH (22), old SMB (139), SMB (445):
+nmap finds four open TCP ports, FTP (21), SSH (22), old SMB (139), SMB (445):
 
 ```bash
 nmap -p- --open --min-rate=5000 -Pn -T4 -oN nmap/open_ports 10.129.143.253
