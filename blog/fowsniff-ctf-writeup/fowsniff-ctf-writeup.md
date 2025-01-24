@@ -102,7 +102,7 @@ cat credentials_hashed.txt | awk -F '@' '{print $1}' > users.txt
 ### passwords.txt
 
 ```bash
-cat credentials_hashed | awk -F ':' '{print $2}' > passwords.txt
+cat credentials_hashed.txt | awk -F ':' '{print $2}' > passwords.txt
 ```
 
 ## Enumeration
