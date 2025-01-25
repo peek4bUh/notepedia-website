@@ -3,6 +3,11 @@ hackthebox:
   permalink: /hackthebox
   description: hackthebox tag description
 
+tryhackme:
+  label: tryhackme
+  permalink: /tryhackme
+  description: tryhackme tag description
+
 writeup:
   label: writeup 
   permalink: /writeup

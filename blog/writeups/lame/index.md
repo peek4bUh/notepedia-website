@@ -10,7 +10,7 @@ title: Lame Write-Up
 
 # Lame Write-Up
 
-![Lame Overview](./lame-overview.png)
+![Lame Overview](./overview.png)
 
 Lame is a very basic machine from the [Beginner Track](https://app.hackthebox.com/tracks/Beginner-Track) track to start getting familiar with the main tools of pentesting.
 

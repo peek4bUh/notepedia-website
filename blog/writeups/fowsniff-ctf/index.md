@@ -10,7 +10,7 @@ title: Fowsniff CTF Write-Up
 
 # Fowsniff CTF Write-Up
 
-![Fowsniff CTF Overview](./fowsniff-ctf-overview.png)
+![Fowsniff CTF Overview](./overview.png)
 
 Fowsniff CTF is a machine with a lot of hints perfect for beginners.
 
