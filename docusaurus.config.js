@@ -84,12 +84,6 @@ const config = {
         ],
       },
 
-      docs: {
-        sidebar: {
-          hideable: true,
-        },
-      },
-
       footer: {
         style: 'dark',
         copyright: `Created with ♥ by <a href="https://github.com/facebook/docusaurus">Docusaurus</a> `,
