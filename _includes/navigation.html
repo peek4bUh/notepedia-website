@@ -3,7 +3,7 @@
   {% for item in sorted_notes %}
     <li class="navigation__item">
       <a 
-        class="navigation__link{% if page.url == item.url %} current{% endif %}" 
+        class="navigation__link {% if page.url == item.url %}navigation__link--active{% endif %}"
         href="{{ item.url }}">
         {{ item.title }}
       </a>
