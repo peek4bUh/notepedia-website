@@ -1,0 +1,28 @@
+.menu-left {
+	position: relative;
+}
+
+.hamburger {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 2rem;
+	height: 2rem;
+	cursor: pointer;
+  border-radius: 50%;
+}
+
+.bar {
+	width: 1.5rem;
+	height: 0.125rem;
+	background-color: #fff;
+}
+
+.bar:first-child {
+	margin-bottom: 0.3rem;
+}
+
+.bar:last-child {
+	margin-top: 0.3rem;
+}

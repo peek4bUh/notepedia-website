@@ -1,0 +1,102 @@
+---
+title: Home
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>{{ site.title }}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: system-ui, sans-serif;
+			background-color: #f3f4f6;
+			color: #111827;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			min-height: 100vh;
+			padding: 2rem;
+		}
+
+		h1 {
+			font-size: 2rem;
+			margin-bottom: 2rem;
+		}
+
+		.card-container {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 2rem;
+			width: 100%;
+			max-width: 800px;
+		}
+
+		.card {
+			background-color: white;
+			border-radius: 1rem;
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+			padding: 2rem;
+			text-align: center;
+			transition: transform 0.2s ease, box-shadow 0.2s ease;
+		}
+
+		.card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+		}
+
+		.card-title {
+			font-size: 1.25rem;
+			margin-bottom: 0.5rem;
+		}
+
+		.card-desc {
+			font-size: 0.95rem;
+			color: #6b7280;
+			margin-bottom: 1rem;
+		}
+
+		.card a {
+			display: inline-block;
+			margin-top: 0.5rem;
+			padding: 0.5rem 1rem;
+			background-color: #111827;
+			color: white;
+			text-decoration: none;
+			border-radius: 0.375rem;
+			transition: background-color 0.2s ease;
+		}
+
+		.card a:hover {
+			background-color: #1f2937;
+		}
+		</style>
+	</head>
+	<body>
+		<h1>Welcome to {{ site.title }}</h1>
+		<div class="card-container">
+			<div class="card">
+				<div class="card-title">📒 Notes</div>
+				<div class="card-desc">Personal notes, quick references, and learning summaries.</div>
+				{% assign sorted_notes = site.notes | sort: "title" %}
+				{% assign first_note = sorted_notes[0] %}
+				<a href="{{ first_note.url }}">Explore Notes</a>
+			</div>
+			<div class="card">
+				<div class="card-title">📝 Blog Posts</div>
+				<div class="card-desc">Thoughts, tutorials, and long-form articles I've written.</div>
+				<a href="/blog/">Read Posts</a>
+			</div>
+		</div>
+	</body>
+</html>
+

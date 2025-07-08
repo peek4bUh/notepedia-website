@@ -1,5 +1,14 @@
-title: Nopedia
-description: A starter template for a Jeykll site using the Just the Docs theme!
-theme: just-the-docs
+title: Notepedia
 
-# url: https://just-the-docs.github.io
+collections:
+  notes:
+    output: true
+    permalink: /notes/:name
+
+defaults:
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: default
+

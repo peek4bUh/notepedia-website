@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{ page.title }} | {{ site.title }}</title>
+		<link rel="icon" href="/assets/icons/logo.svg">
+		<link rel="stylesheet" href="/assets/css/styles.css">
+	</head>
+
+	<body>
+		{% include header.html %}
+
+		<main class="main-frame">
+			<aside class="left-pane" id="left-pane">
+				{% include navigation.html %}
+			</aside>
+
+			<div class="middle-pane">
+				{{ content }}
+			</div>
+
+			<aside class="right-pane" id="right-pane">
+				<h2>On This Page</h2>
+				{% include toc.html html=content class="toc" %}
+			</aside>
+
+			<button class="toc-btn" id="toc">
+				<img src="/assets/icons/toc.svg" alt="Toc Icon">
+			</button>
+		</main>
+	</body>
+	<script src="/assets/js/hamburger.js"></script>
+	<script src="/assets/js/toc.js"></script> 
+</html>
