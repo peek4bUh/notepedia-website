@@ -9,6 +9,7 @@
   top: 0;
   z-index: 10;
   width: 100%;
+  border-bottom: 1px solid $bg-color;
 
   &__controls {
     display: flex;
@@ -44,5 +45,12 @@
     font-size: 1.25rem;
     text-decoration: none;
     color: #fff;
+  }
+}
+
+// Breakpoints
+@media (min-width: 50rem) {
+  .header {
+    height: 4rem;
   }
 }

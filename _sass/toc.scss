@@ -1,23 +1,30 @@
 .toc {
   margin: 0;
   padding: 1rem;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   list-style-type: none;
-}
 
-.toc ul {
-  list-style-type: none;
-}
+  & > li ul {
+    padding-left: 1rem;
+  }
+  & ul {
+    list-style-type: none;
+  }
 
-.toc a {
-  display: block;
-  color: hsl(224, 0%, 77%);
-  text-decoration: none;
-  padding: 0.25rem 0;
-}
+  & a {
+    display: block;
+    color: hsl(224, 0%, 77%);
+    text-decoration: none;
+    padding: 0.25rem 0;
+  }
 
-.toc a:hover {
-  color: hsl(0, 0%, 100%);
+  & a:hover {
+    color: hsl(0, 0%, 100%);
+  }
+
+  & .active {
+    color: $text-muted;
+  }
 }
 
 .toc-btn {
@@ -32,15 +39,17 @@
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 60;
 
   & img {
     width: 32px;
     filter: invert(1);
   }
-
-  &--hidden {
-    visibility: hidden;
-  }
 }
 
+
+@media (min-width: 75rem) {
+  .toc-btn {
+    display: none;
+  }
+}

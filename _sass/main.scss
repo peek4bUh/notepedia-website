@@ -2,7 +2,6 @@
   padding-top: 3.5rem;
   padding-bottom: 2rem;
   width: 100%;
-  display: flex;
 }
 
 .left-pane {
@@ -24,24 +23,28 @@
 
 .middle-pane {
   padding-top: 1rem;
-  /*padding-left: 300px;*/
-  max-width: 700px;
 }
 
 .right-pane {
   position: fixed;
-  top: 0;
+  top: 3.5rem;
   right: -80%;
-  height: 100%;
+  height: calc(100vh - 3.5rem);
   width: 80%;
+  max-width: 330px;
   background-color: #222;
   color: white;
-  padding: 20px;
+  padding: 2rem;
   transition: right 0.3s ease-in-out;
-  z-index: 1000;
+  z-index: 50;
 
   &--active {
     right: 0;
+  }
+
+  & h2 {
+    margin-top: 0;
+    padding-left: 0;
   }
 
   & ul {
@@ -50,11 +53,8 @@
   }
 
   & li {
-    margin: 20px 0;
   }
-
 }
-
 
 .navigation {
   margin: 0;
@@ -77,6 +77,7 @@
       background-color: hsl(0, 0, 60%);
       font-weight: bold;
       color: $bg-color;
+      font-weight: 600;
 
       &:hover {
         color: $bg-color;
@@ -87,4 +88,55 @@
 
 .reference-title {
   color: #5dc1b9;
+}
+
+
+/* Container around the code block */
+.highlight {
+  overflow-x: auto;
+  padding: 1rem;
+
+  & pre {
+    border-radius: 4px;
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    margin: 0;
+    font-family: Menlo, Consolas, Monaco, "Courier New", monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #f8f8f2;
+  }
+
+  & code {
+    background: transparent; 
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+  }
+}
+
+// Breakpoints
+@media (min-width: 50rem) {
+  .left-pane {
+    top: 4rem;
+    background-color: $bg-color-alt;
+    visibility: visible;
+    width: 300px;
+    height: calc(100vh - 4rem);
+  }
+
+  .middle-pane {
+    padding-left: 300px;
+  }
+
+  .right-pane {
+    height: calc(100vh - 4rem);
+    top: 4rem;
+  }
+}
+
+@media (min-width: 75rem) {
+  .right-pane {
+    right: 0;
+  }
 }

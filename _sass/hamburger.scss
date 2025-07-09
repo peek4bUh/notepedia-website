@@ -26,3 +26,10 @@
 .bar:last-child {
 	margin-top: 0.3rem;
 }
+
+// Breakpoints
+@media (min-width: 50rem) {
+  .hamburger {
+    display: none;
+  }
+}
