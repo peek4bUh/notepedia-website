@@ -1,13 +1,15 @@
 <header class="header">
-	<div class="site-info">
-		<img src="/assets/icons/logo.svg" alt="Site Icon">
-		<a href="/">{{ site.title }}</a>
+	<div class="header__left-side">
+		{% include hamburger.html %}
+		<div class="left-side__info">
+			<img class="site-logo" src="/assets/icons/logo.svg" alt="Site Icon">
+			<a class="site-title" href="/">{{ site.title }}</a>
+		</div>
 	</div>
 
-	<div class="header__controls">
-		<button class="btn-search" aria-label="Toggle search">
-			<img src="/assets/icons/search.svg" alt="Search">
+	<div class="header__right-side">
+		<button class="btn-search">
+			<img src="/assets/icons/search.svg" alt="Search Icon">
 		</button>
-		{% include hamburger.html %}
 	</div>
 </header>

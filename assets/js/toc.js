@@ -1,24 +1,23 @@
 const toc = document.getElementById('toc');
-const rightPane = document.getElementById('right-pane');
+const tocBtn = document.getElementById('toc-btn');
+const rightSidebar = document.getElementById('right-sidebar');
 
 
-toc.addEventListener('click', () => {
-	rightPane.classList.toggle('right-pane--active');
+tocBtn.addEventListener('click', () => {
+	rightSidebar.classList.toggle('container__sidebar-right--active');
 });
 
 
-rightPane.querySelectorAll('a').forEach(link => {
+rightSidebar.querySelectorAll('a').forEach(link => {
 	link.addEventListener('click', () => {
-		rightPane.classList.toggle('right-pane--active');
+		rightSidebar.classList.toggle('container__sidebar-right--active');
 	})
 })
 
 
 document.addEventListener('DOMContentLoaded', () => {
-	const toc = document.querySelector('.right-pane .toc');
 	if (!toc) return;
 
-	// 1) Grab all TOC links and their target elements
 	const tocLinks = Array.from(toc.querySelectorAll('a[href^="#"]'));
 	const sections = tocLinks
 	.map(link => document.getElementById(link.getAttribute('href').slice(1)))
@@ -26,20 +25,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if (sections.length === 0) return;
 
-	// 3) On scroll, find the section closest to the top
 	function onScroll() {
 		const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
 		let currentId = sections[0].id;
 
 		for (let i = 0; i < sections.length; i++) {
 			const sectionTop = sections[i].offsetTop;
-			// Trigger a bit earlier: 50px above the section
+
 			if (scrollPos >= sectionTop - 50) {
 				currentId = sections[i].id;
 			}
 		}
 
-		// 4) Apply the active class
 		tocLinks.forEach(link => {
 			if (link.getAttribute('href') === `#${currentId}`) {
 				link.classList.add('active');
@@ -49,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-	// 5) Listen for scrolls (and run once to initialize)
 	window.addEventListener('scroll', onScroll);
 	onScroll();
 });

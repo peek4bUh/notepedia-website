@@ -1,58 +1,57 @@
-.main-frame {
+.container {
   padding-top: 3.5rem;
   padding-bottom: 2rem;
   width: 100%;
-}
 
-.left-pane {
-  visibility: hidden;
-  position: fixed;
-  top: 3.5rem;
-  left: 0;
-  width: 100%;
-  height: calc(100vh - 3.5rem);
-  background-color: #222;
-  color: #fff;
-  padding: 1rem;
-  z-index: 100;
+  &__sidebar-left {
+    visibility: hidden;
+    position: fixed;
+    top: 3.5rem;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 3.5rem);
+    background-color: #222;
+    color: #fff;
+    padding: 1rem;
+    z-index: 100;
 
-  &--active {
-    visibility: visible;
-  }
-}
-
-.middle-pane {
-  padding-top: 1rem;
-}
-
-.right-pane {
-  position: fixed;
-  top: 3.5rem;
-  right: -80%;
-  height: calc(100vh - 3.5rem);
-  width: 80%;
-  max-width: 330px;
-  background-color: #222;
-  color: white;
-  padding: 2rem;
-  transition: right 0.3s ease-in-out;
-  z-index: 50;
-
-  &--active {
-    right: 0;
+    &--active {
+      visibility: visible;
+    }
   }
 
-  & h2 {
+  &__sidebar-right {
+    position: fixed;
+    top: 3.5rem;
+    right: -80%;
+    height: calc(100vh - 3.5rem);
+    width: 80%;
+    max-width: 280px;
+    background-color: #222;
+    color: white;
+    padding: 1.25rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 50;
+
+    &--active {
+      right: 0;
+    }
+
+
+    & ul {
+      list-style: none;
+      padding: 0;
+    }
+  }
+
+}
+
+.content-toc {
+
+  &__title {
     margin-top: 0;
     padding-left: 0;
-  }
-
-  & ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  & li {
+    font-size: 1.125rem;
   }
 }
 
@@ -117,26 +116,45 @@
 
 // Breakpoints
 @media (min-width: 50rem) {
-  .left-pane {
-    top: 4rem;
-    background-color: $bg-color-alt;
-    visibility: visible;
-    width: 300px;
-    height: calc(100vh - 4rem);
-  }
+  .container {
 
-  .middle-pane {
-    padding-left: 300px;
-  }
+    &__sidebar-left {
+      top: 4rem;
+      background-color: $bg-color-alt;
+      visibility: visible;
+      width: 300px;
+      height: calc(100vh - 4rem);
+    }
 
-  .right-pane {
-    height: calc(100vh - 4rem);
-    top: 4rem;
+    &__wrapper {
+      display: flex;
+    }
+
+    &__content {
+      padding-left: 300px;
+    }
+
+    &__sidebar-right {
+      height: calc(100vh - 4rem);
+      top: 4rem;
+    }
   }
 }
 
-@media (min-width: 75rem) {
-  .right-pane {
-    right: 0;
+@media (min-width: 72rem) {
+  .container {
+    padding-top: 4rem;
+
+    &__sidebar-right {
+      position: relative;
+      inset: 0;
+      z-index: 0;
+      background-color: $bg-color;
+      border-left: 1px solid $c;
+    }
+  }
+
+  .content-toc {
+    position: fixed;
   }
 }

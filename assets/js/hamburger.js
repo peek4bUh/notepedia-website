@@ -1,11 +1,11 @@
 const hamburger = document.getElementById('hamburger');
-const leftPane = document.getElementById('left-pane');
+const leftSidebar = document.getElementById('left-sidebar');
 
 
 hamburger.addEventListener('click', () => {
-	if (rightPane.classList.contains('right-pane--active')) {
-		rightPane.classList.remove('right-pane--active');
+	if (rightSidebar.classList.contains('container__sidebar-right--active')) {
+		rightSidebar.classList.remove('container__sidebar-right--active');
 	}
 
-	leftPane.classList.toggle('left-pane--active');
+	leftSidebar.classList.toggle('container__sidebar-left--active');
 });
