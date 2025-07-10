@@ -23,18 +23,14 @@ body {
 
 h1 {
 	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
-	padding-left: 1rem;
+	padding-bottom: 1rem;
 	margin: 0;
 	border-bottom: 1px solid $c;
-  font-size: 2.125rem;
-  font-weight: 600;
 }
 
 h2, h3, h4, h5, h6 {
   font-weight: 600;
 	margin-top: 2rem;
-	padding-left: 1rem;
 }
 
 h2 {
@@ -46,7 +42,7 @@ h3 {
 }
 
 p {
-	padding: 0.75rem 1rem;
+	padding: 0.75rem 0;
 	color: hsl(224, 6%, 85%);
 	margin: 0;
 }

@@ -1,34 +1,31 @@
-.menu-left {
-	position: relative;
-}
-
 .hamburger {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 2rem;
-	height: 2rem;
-	cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
   border-radius: 50%;
+
+  &__bar {
+    width: 1.25rem;
+    height: 0.125rem;
+    background-color: $c;
+
+    &:first-child {
+      margin-bottom: 0.3rem;
+    }
+
+    &:last-child {
+      margin-top: 0.3rem;
+    }
+  }
 }
 
-.bar {
-	width: 1.25rem;
-	height: 0.125rem;
-	background-color: #fff;
-}
-
-.bar:first-child {
-	margin-bottom: 0.3rem;
-}
-
-.bar:last-child {
-	margin-top: 0.3rem;
-}
 
 // Breakpoints
-@media (min-width: 50rem) {
+@media (min-width: 46.876rem) {
   .hamburger {
     display: none;
   }

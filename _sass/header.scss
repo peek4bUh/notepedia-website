@@ -2,56 +2,65 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0.625rem;
+  padding: 0 0.75rem;
   height: 3.5rem;
-  background-color: $bg-color-alt;
+  background-color: $bg-color;
   position: fixed;
   top: 0;
   z-index: 10;
   width: 100%;
-  border-bottom: 1px solid $bg-color;
+  border-bottom: 1px solid $bg-color-alt;
 
   &__left-side,
   &__right-side {
     display: flex;
     gap: 0.6rem;
   }
+
+  &__right-side {
+    gap: 0rem;
+  }
 }
 
 .left-side__info {
   display: flex;
   align-items: center;
+  padding-bottom: 0.1rem;
+  font-weight: 600;
 }
 
-.site-logo {
-  display: none;
-  width: 26px;
-  margin-right: 0.25rem;
-}
+.site {
+  &-logo {
+    display: none;
+    width: 26px;
+    margin-right: 0.25rem;
+  }
 
-.site-title {
-  font-size: 1.25rem;
-  text-decoration: none;
-  color: #fff;
+  &-title {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: #fff;
+  }
 }
 
 .btn-search {
   display: flex;
-  justify-contents: center;
+  justify-content: center;
   align-items: center;
-  width: 2rem;
-  height: 2rem;
+  width: 32px;
+  height: 32px;
   background-color: transparent;
   cursor: pointer;
   border: none;
 
   & img {
     width: 20px;
+    padding-bottom: 0.125rem;
   }
 }
 
 // Breakpoints
-@media (min-width: 50rem) {
+@media (min-width: 46.876rem) {
   .header {
     height: 4rem;
     padding: 0 1rem;

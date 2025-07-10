@@ -17,10 +17,10 @@
     color: hsl(224, 0%, 77%);
     text-decoration: none;
     padding: 0.25rem 0;
-  }
 
-  & a:hover {
-    color: hsl(0, 0%, 100%);
+    &:hover {
+      color: hsl(0, 0%, 100%);
+    }
   }
 
   & .active {
@@ -31,20 +31,15 @@
 .toc-btn {
   display: flex;
   justify-content: center;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background-color: #333;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
   border: none;
-  border-radius: 0.5rem;
   cursor: pointer;
   z-index: 60;
 
   & img {
-    width: 32px;
-    filter: invert(1);
+    width: 20px;
   }
 }
 

@@ -1,6 +1,5 @@
 .container {
   padding-top: 3.5rem;
-  padding-bottom: 2rem;
   width: 100%;
 
   &__sidebar-left {
@@ -10,7 +9,7 @@
     left: 0;
     width: 100%;
     height: calc(100vh - 3.5rem);
-    background-color: #222;
+    background-color: $bg-color;
     color: #fff;
     padding: 1rem;
     z-index: 100;
@@ -20,6 +19,10 @@
     }
   }
 
+  &__content {
+    padding: 1.5rem;
+  }
+  
   &__sidebar-right {
     position: fixed;
     top: 3.5rem;
@@ -27,11 +30,12 @@
     height: calc(100vh - 3.5rem);
     width: 80%;
     max-width: 280px;
-    background-color: #222;
-    color: white;
+    background-color: $bg-color;
+    color: #fff;
     padding: 1.25rem;
     transition: right 0.3s ease-in-out;
     z-index: 50;
+    border-left: 1px solid $c;
 
     &--active {
       right: 0;
@@ -115,12 +119,12 @@
 }
 
 // Breakpoints
-@media (min-width: 50rem) {
+@media (min-width: 46.876rem) {
   .container {
-
     &__sidebar-left {
       top: 4rem;
-      background-color: $bg-color-alt;
+      background-color: $bg-color;
+      border-right: 1px solid $c;
       visibility: visible;
       width: 300px;
       height: calc(100vh - 4rem);
@@ -128,10 +132,11 @@
 
     &__wrapper {
       display: flex;
+      padding-left: 300px;
     }
 
     &__content {
-      padding-left: 300px;
+      padding: 1.75rem;
     }
 
     &__sidebar-right {
@@ -151,6 +156,7 @@
       z-index: 0;
       background-color: $bg-color;
       border-left: 1px solid $c;
+      height: inherit;
     }
   }
 
