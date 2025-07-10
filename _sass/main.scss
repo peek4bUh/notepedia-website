@@ -51,7 +51,6 @@
 }
 
 .content-toc {
-
   &__title {
     margin-top: 0;
     padding-left: 0;
@@ -155,12 +154,17 @@
       inset: 0;
       z-index: 0;
       background-color: $bg-color;
-      border-left: 1px solid $c;
       height: inherit;
+      padding: 0;
+      border-left: none;
     }
   }
 
   .content-toc {
     position: fixed;
+    padding: 1.25rem;
+    width: inherit;
+    height: 100vh;
+    border-left: 1px solid $c;
   }
 }
