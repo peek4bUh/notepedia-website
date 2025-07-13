@@ -10,10 +10,11 @@
 
 	<body>
 		{% include header.html %}
-
-		<main class="container">
+		<div class="container">
 			<aside class="container__sidebar-left" id="left-sidebar">
-				{% include navigation.html %}
+				<div class="container__sidebar-left-inner">
+					{% include navigation.html %}
+				</div>
 			</aside>
 
 			<div class="container__wrapper">
@@ -22,13 +23,13 @@
 				</div>
 
 				<aside class="container__sidebar-right" id="right-sidebar">
-					<div class="content-toc">
+					<div class="container__sidebar-right-inner">
 						<h2 class="content-toc__title">Table of Contents</h2>
 						{% include toc.html html=content class="content-toc__list" id="toc"%}
 					</div>
 				</aside>
 			</div>
-		</main>
+		</div>
 	</body>
 	<script src="/assets/js/hamburger.js"></script>
 	<script src="/assets/js/toc.js"></script> 

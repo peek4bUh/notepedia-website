@@ -1,18 +1,20 @@
 .container {
-  padding-top: 3.5rem;
-  width: 100%;
+  padding-top: 3.125rem;
 
   &__sidebar-left {
     visibility: hidden;
     position: fixed;
     top: 3.5rem;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: calc(100vh - 3.5rem);
     background-color: $bg-color;
     color: #fff;
-    padding: 1rem;
     z-index: 100;
+
+    &-inner {
+      padding: 1.5rem;
+    }
 
     &--active {
       visibility: visible;
@@ -21,15 +23,23 @@
 
   &__content {
     padding: 1.5rem;
+
+    & ul {
+      padding-left: 1rem; 
+
+      & li {
+        line-height: 1.375rem;
+      }
+    }
   }
   
   &__sidebar-right {
     position: fixed;
-    top: 3.5rem;
-    right: -80%;
-    height: calc(100vh - 3.5rem);
-    width: 80%;
-    max-width: 280px;
+    top: 3.125rem;
+    right: -75%;
+    height: calc(100vh - 3.125rem);
+    width: 75%;
+    max-width: 300px;
     background-color: $bg-color;
     color: #fff;
     padding: 1.25rem;
@@ -51,6 +61,8 @@
 }
 
 .content-toc {
+  width: 300px;
+
   &__title {
     margin-top: 0;
     padding-left: 0;
@@ -62,28 +74,17 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-
+  line-height: 1.25rem;
 
   &__link {
     display: block;
-    padding: 0.3rem 0.5rem;
+    padding: 0.3rem 0;
     text-decoration: none;
     color: hsl(224, 0%, 77%);
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
 
     &:hover {
       color: hsl(0, 0%, 100%);
-    }
-
-    &--active {
-      background-color: hsl(0, 0, 60%);
-      font-weight: bold;
-      color: $bg-color;
-      font-weight: 600;
-
-      &:hover {
-        color: $bg-color;
-      }
     }
   }
 }
@@ -117,25 +118,38 @@
   }
 }
 
+
 // Breakpoints
 @media (min-width: 46.876rem) {
   .container {
+    display: flex;
+    padding-top: 4rem;
+
     &__sidebar-left {
-      top: 4rem;
+      position: relative;
+      top: 0;
+      z-index: 0;
       background-color: $bg-color;
-      border-right: 1px solid $c;
       visibility: visible;
-      width: 300px;
-      height: calc(100vh - 4rem);
+      width: auto;
+      min-width: 280px;
+      height: calc(100vh - 3.125rem;);
+
+      &-inner {
+        position: fixed;
+        border-right: 1px solid $c;
+        width: 280px;
+        height: 100%;
+      }
     }
 
     &__wrapper {
       display: flex;
-      padding-left: 300px;
+      flex: 2 1 500px;
     }
 
     &__content {
-      padding: 1.75rem;
+      padding: 3rem;
     }
 
     &__sidebar-right {
@@ -145,26 +159,32 @@
   }
 }
 
-@media (min-width: 72rem) {
+@media (min-width: 70rem) {
   .container {
-    padding-top: 4rem;
+    &__sidebar-left {
+      width: 300px;
+    }
 
     &__sidebar-right {
+      display: flex;
       position: relative;
-      inset: 0;
+      justify-content: flex-start;
+      top: 0;
       z-index: 0;
       background-color: $bg-color;
-      height: inherit;
+      min-width: 280px;
+      height: calc(100vh - 3.125rem;);
+      flex: 1 calc((100vw - 600px) / 2);
       padding: 0;
       border-left: none;
-    }
-  }
+      inset: 0;
 
-  .content-toc {
-    position: fixed;
-    padding: 1.25rem;
-    width: inherit;
-    height: 100vh;
-    border-left: 1px solid $c;
+      &-inner {
+        position: fixed;
+        width: 280px;
+        height: 100%;
+        padding: 2.5rem 1.5rem;
+      }
+    }
   }
 }

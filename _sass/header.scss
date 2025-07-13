@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 0.75rem;
-  height: 3.5rem;
+  height: 3.125rem;
   background-color: $bg-color;
   position: fixed;
   top: 0;
@@ -25,7 +25,6 @@
 .left-side__info {
   display: flex;
   align-items: center;
-  padding-bottom: 0.1rem;
   font-weight: 600;
 }
 
@@ -37,7 +36,7 @@
   }
 
   &-title {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     text-decoration: none;
     color: #fff;
   }

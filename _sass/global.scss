@@ -2,6 +2,7 @@ $bg-color: hsl(0, 0%, 12%);
 $bg-color-alt: hsl(0, 0%, 20%);
 $text-muted: hsl(220, 10%, 90%);
 $c: hsl(0, 0, 25%);
+$sidebar-left-width: 280px;
 
 
 *, *::before, *::after {
@@ -13,6 +14,7 @@ html {
 	scroll-behavior: smooth;
   scroll-padding-top: 5rem;
 	font-size: 16px;
+  height: 100vh;
 }
 
 
@@ -22,10 +24,9 @@ body {
 }
 
 h1 {
-	padding-top: 1.5rem;
-	padding-bottom: 1rem;
+  padding: 1rem 0 1.5rem;
 	margin: 0;
-	border-bottom: 1px solid $c;
+  font-size: 2.25rem;
 }
 
 h2, h3, h4, h5, h6 {
@@ -67,11 +68,6 @@ a:hover {
 
 blockquote {
 	margin: 0;
-}
-
-ul {
-  padding: 0 2rem;
-  line-height: 1.4rem;
 }
 
 code {
