@@ -1,0 +1,48 @@
+$sm-screen: 40rem;  // 640px
+$md-screen: 48rem;  // 768px
+$lg-screen: 64rem;  // 1024px
+$xl-screen: 80rem;  // 1280px
+$xxl-screen: 96rem; // 1536px
+
+
+@mixin tablet {
+  @media (min-width: $md-screen) {       
+    @content
+  }
+}
+
+//@mixin laptop {
+//  @media (min-width: $lg-screen) {       
+//    @content
+//  }
+//
+//@media (min-width: 70rem) {
+//  .container {
+//    &__sidebar-left {
+//      width: 300px;
+//    }
+//
+//    &__sidebar-right {
+//      display: flex;
+//      position: relative;
+//      justify-content: flex-start;
+//      top: 0;
+//      z-index: 0;
+//      background-color: $primary;
+//      min-width: 280px;
+//      height: calc(100vh - 3.125rem;);
+//      flex: 1 calc((100vw - 600px) / 2);
+//      padding: 0;
+//      border-left: none;
+//      inset: 0;
+//
+//      &-inner {
+//        position: fixed;
+//        width: 280px;
+//        height: 100%;
+//        padding: 2.5rem 1.5rem;
+//      }
+//    }
+//  }
+//}
+//

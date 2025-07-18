@@ -1,0 +1,55 @@
+/* https://codepen.io/barthy-koeln/pen/EBzxje */
+/* https://codepen.io/zetareticoli/pen/MROMZE */
+
+$themes: (
+  "light": (
+    "bg-primary": hsl(220, 14.29%, 95.88%),
+    "bg-primary-alt": hsl(220, 10%, 98%),
+
+    "text-normal": #111827,
+    "text-muted": #111827,
+    "text-accent": hsl(205, 100%, 40%),
+
+    "border-color": red,
+
+    "button-bg": hsl(202.75, 100%, 37%),
+    "button-bg-alt": hsl(202.75, 100%, 40%),
+
+    "link": hsl(224, 100%, 65%),
+    "link-hover": green,
+
+    "theme-switcher-bg": hsl(205, 100%, 40%), 
+    "theme-switcher-text": hsl(220, 10%, 98%),
+
+    "code-inline-bg": hsl(0, 0%, 20%)
+  ),
+  "dark": (
+    "bg-primary": hsl(0, 0%, 12%),
+    "bg-primary-alt": hsl(220, 10%, 98%),
+
+    "text-normal": #111827,
+    "text-muted": hsl(220, 10%, 90%),
+    "text-accent": hsl(254, 55%, 55%),
+
+    "button-bg": hsl(254, 55%, 55%),
+    "button-bg-alt": hsl(254, 55%, 60%),
+
+    "border-color": hsl(0, 0, 25%),
+
+    "link": hsl(224, 100%, 85%),
+    "link-hover": #ffffff,
+
+    "theme-switcher-bg": hsl(254, 55%, 55%), 
+    "theme-switcher-text": hsl(220, 10%, 98%),
+
+    "code-inline-bg": hsl(0, 0%, 20%)
+  )
+);
+
+@each $theme-name, $properties in $themes {
+  html[data-theme="#{$theme-name}"] {
+    @each $name, $property in $properties {
+      --#{$name}: #{$property};
+    }
+  }
+}

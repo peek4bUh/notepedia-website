@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,24 +8,24 @@
 		<link rel="stylesheet" href="/assets/css/styles.css">
 	</head>
 
-	<body>
+	<body class="page-default">
 		{% include header.html %}
-		<div class="container">
-			<aside class="container__sidebar-left" id="left-sidebar">
-				<div class="container__sidebar-left-inner">
+		<div class="page-default__container">
+			<aside class="page-default__sidebar-left" id="left-sidebar">
+				<div class="page-default__sidebar-left-inner">
 					{% include navigation.html %}
 				</div>
 			</aside>
 
-			<div class="container__wrapper">
-				<div class="container__content">
+			<div class="page-default__wrapper">
+				<div class="page-default__content">
 					{{ content }}
 				</div>
 
-				<aside class="container__sidebar-right" id="right-sidebar">
-					<div class="container__sidebar-right-inner">
+				<aside class="page-default__sidebar-right" id="right-sidebar">
+					<div class="page-default__sidebar-right-inner">
 						<h2 class="content-toc__title">Table of Contents</h2>
-						{% include toc.html html=content class="content-toc__list" id="toc"%}
+						{% include toc.html html=content class="page-default-toc__list" id="toc"%}
 					</div>
 				</aside>
 			</div>

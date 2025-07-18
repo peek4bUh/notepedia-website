@@ -3,9 +3,9 @@ const leftSidebar = document.getElementById('left-sidebar');
 
 
 hamburger.addEventListener('click', () => {
-	if (rightSidebar.classList.contains('container__sidebar-right--active')) {
-		rightSidebar.classList.remove('container__sidebar-right--active');
+	if (rightSidebar.classList.contains('page-default__sidebar-right--active')) {
+		rightSidebar.classList.remove('page-default__sidebar-right--active');
 	}
 
-	leftSidebar.classList.toggle('container__sidebar-left--active');
+	leftSidebar.classList.toggle('page-default__sidebar-left--active');
 });

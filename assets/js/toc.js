@@ -4,13 +4,13 @@ const rightSidebar = document.getElementById('right-sidebar');
 
 
 tocBtn.addEventListener('click', () => {
-	rightSidebar.classList.toggle('container__sidebar-right--active');
+	rightSidebar.classList.toggle('page-default__sidebar-right--active');
 });
 
 
 rightSidebar.querySelectorAll('a').forEach(link => {
 	link.addEventListener('click', () => {
-		rightSidebar.classList.toggle('container__sidebar-right--active');
+		rightSidebar.classList.toggle('page-default__sidebar-right--active');
 	})
 })
 

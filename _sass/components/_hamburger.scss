@@ -10,7 +10,7 @@
   &__bar {
     width: 1.25rem;
     height: 0.125rem;
-    background-color: $c;
+    background-color: var(--primary-alt);
 
     &:first-child {
       margin-bottom: 0.3rem;

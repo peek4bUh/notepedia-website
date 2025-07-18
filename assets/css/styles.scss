@@ -1,9 +1,21 @@
 ---
 ---
+/* https://dev.to/technoph1le/a-modern-sass-folder-structure-330f */
 
-@import "normalize";
-@import "global";
-@import "main";
-@import "header";
-@import "hamburger";
-@import "toc";
+@import 'vendors/normalize';
+
+@import 'abstracts/media-queries';
+@import 'abstracts/variables';
+
+@import 'base/base';
+
+@import 'abstracts/theme';
+
+@import 'components/hamburger';
+@import "components/toc";
+@import "components/theme-switcher";
+
+@import "layouts/header";
+
+@import "pages/index";
+@import "pages/default";

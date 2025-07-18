@@ -1,5 +1,13 @@
-.container {
-  padding-top: 3.125rem;
+.page-default {
+
+  &__container {
+    padding-top: 3.125rem;
+
+    @include tablet(){
+      display: flex;
+      padding-top: 4rem;
+    }
+  }
 
   &__sidebar-left {
     visibility: hidden;
@@ -8,21 +16,91 @@
     left: 0;
     width: 100vw;
     height: calc(100vh - 3.5rem);
-    background-color: $bg-color;
+    background-color: var(--bg-primary);
     color: #fff;
     z-index: 100;
 
     &-inner {
       padding: 1.5rem;
+
+      @include tablet(){
+        position: fixed;
+        border-right: 1px solid var(--border-color);
+        width: 280px;
+        height: 100%;
+      }
     }
 
     &--active {
       visibility: visible;
     }
+
+    @include tablet(){
+      position: relative;
+      top: 0;
+      z-index: 0;
+      background-color: var(--bg-primary);
+      visibility: visible;
+      width: auto;
+      min-width: 280px;
+      height: calc(100vh - 3.125rem;);
+    }
+  }
+
+  &__wrapper {
+    @include tablet(){
+      display: flex;
+      flex: 2 1 500px;
+    }
   }
 
   &__content {
     padding: 1.5rem;
+
+    & h1 {
+      padding: 1rem 0 1.5rem;
+      margin: 0;
+      font-size: $h1-size;
+      border-bottom: 1px solid var(--border-color)
+    }
+
+    & h2, h3, h4, h5, h6 {
+      font-weight: 600;
+      margin-top: 2rem;
+    }
+
+    & h2 {
+      font-size: $h2-size;
+    }
+
+    & h3 {
+      font-size: $h3-size;
+    }
+
+    & p {
+      padding: 0.75rem 0;
+      color: hsl(224, 6%, 85%);
+      margin: 0;
+    }
+
+    & p:first-of-type {
+      padding-top: 1.5rem;
+    }
+
+    & p + p {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+
+    & blockquote {
+      margin: 0;
+    }
+
+    & code {
+      background-color: var(--code-inline-bg);
+      padding: 1px 0.25rem;
+      border-radius: 0.25rem;
+    }
 
     & ul {
       padding-left: 1rem; 
@@ -31,8 +109,13 @@
         line-height: 1.375rem;
       }
     }
+
+    @include tablet(){
+      padding: 3rem;
+    }
   }
-  
+
+
   &__sidebar-right {
     position: fixed;
     top: 3.125rem;
@@ -40,24 +123,27 @@
     height: calc(100vh - 3.125rem);
     width: 75%;
     max-width: 300px;
-    background-color: $bg-color;
+    background-color: var(--bg-primary);
     color: #fff;
     padding: 1.25rem;
     transition: right 0.3s ease-in-out;
     z-index: 50;
-    border-left: 1px solid $c;
+    border-left: 1px solid var(--border-color);
 
-    &--active {
+    &active {
       right: 0;
     }
-
 
     & ul {
       list-style: none;
       padding: 0;
     }
-  }
 
+    @include tablet(){
+      height: calc(100vh - 4rem);
+      top: 4rem;
+    }
+  }
 }
 
 .content-toc {
@@ -115,76 +201,5 @@
     padding: 0;
     font-size: inherit;
     color: inherit;
-  }
-}
-
-
-// Breakpoints
-@media (min-width: 46.876rem) {
-  .container {
-    display: flex;
-    padding-top: 4rem;
-
-    &__sidebar-left {
-      position: relative;
-      top: 0;
-      z-index: 0;
-      background-color: $bg-color;
-      visibility: visible;
-      width: auto;
-      min-width: 280px;
-      height: calc(100vh - 3.125rem;);
-
-      &-inner {
-        position: fixed;
-        border-right: 1px solid $c;
-        width: 280px;
-        height: 100%;
-      }
-    }
-
-    &__wrapper {
-      display: flex;
-      flex: 2 1 500px;
-    }
-
-    &__content {
-      padding: 3rem;
-    }
-
-    &__sidebar-right {
-      height: calc(100vh - 4rem);
-      top: 4rem;
-    }
-  }
-}
-
-@media (min-width: 70rem) {
-  .container {
-    &__sidebar-left {
-      width: 300px;
-    }
-
-    &__sidebar-right {
-      display: flex;
-      position: relative;
-      justify-content: flex-start;
-      top: 0;
-      z-index: 0;
-      background-color: $bg-color;
-      min-width: 280px;
-      height: calc(100vh - 3.125rem;);
-      flex: 1 calc((100vw - 600px) / 2);
-      padding: 0;
-      border-left: none;
-      inset: 0;
-
-      &-inner {
-        position: fixed;
-        width: 280px;
-        height: 100%;
-        padding: 2.5rem 1.5rem;
-      }
-    }
   }
 }
