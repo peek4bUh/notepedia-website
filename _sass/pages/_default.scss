@@ -4,8 +4,16 @@
     padding-top: var(--xs-navbar-height);
 
     @include sm-screen(){
-      display: flex;
       padding-top: var(--sm-navbar-height);
+    }
+  }
+
+  &__pane {
+    max-width: 1536px;
+    margin: 0 auto;
+
+    @include sm-screen(){
+      display: flex;
     }
   }
 
@@ -14,12 +22,14 @@
 
     @include md-screen(){
       display: flex;
+      justify-content: space-between;
       flex: 2 1 500px;
     }
   }
 
   &__content {
     padding: var(--xs-content-pad);
+    max-width: 850px;
 
     @include sm-screen(){
       padding: var(--sm-content-pad);
@@ -113,10 +123,14 @@
     }
 
     &--left {
-      border-right: 1px solid var(--border-color);
       position: fixed;
-      width: 280px;
+      width: 100%;
       height: 100%;
+
+      @include md-screen(){
+        width: 280px;
+        border-right: 1px solid var(--border-color);
+      }
 
       @include lg-screen(){
         border-right: none;
@@ -172,6 +186,7 @@
       z-index: 0;
       background-color: var(--bg-primary);
       min-width: 280px;
+      max-width: 300px;
       height: calc(100vh - 3.125rem;);
       flex: 1 calc((100vw - 600px) / 2);
       padding: 0;

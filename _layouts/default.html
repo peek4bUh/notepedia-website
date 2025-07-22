@@ -12,38 +12,40 @@
 		{% include header.html %}
 
 		<div class="page-default__container">
-			<aside class="sidebar sidebar--left" id="left-sidebar">
-				<div class="sidebar__inner sidebar__inner--left">
-					{% include navigation.html %}
-				</div>
-			</aside>
-
-			<div class="page-default__wrapper">
-				<div class="page-default__content">
-					{{ content }}
-				</div>
-
-				<aside class="sidebar sidebar--right" id="right-sidebar">
-					<div class="sidebar__inner sidebar__inner--right">
-						<div class="toc">
-							<div class="toc__header">
-								<div class="toc__icon-wrapper">
-									<img src="/assets/icons/toc.svg" alt="Toc Icon">
-								</div>
-								<h2 class="toc__title">Contents</h2>
-								<button class="toc__btn" id="toc-btn-cross">
-									<img class="toc__cross" src="/assets/icons/cross.svg" alt="Toc Icon">
-								</button>
-							</div>
-							{% include toc-list.html html=content class="toc__list" %}
-						</div>
+			<div class="page-default__pane">
+				<aside class="sidebar sidebar--left" id="left-sidebar">
+					<div class="sidebar__inner sidebar__inner--left">
+						{% include navigation.html %}
 					</div>
 				</aside>
-			</div>
 
-			<button class="toc-btn" id="toc-btn">
-				<img class="toc-btn__img" src="/assets/icons/toc.svg" alt="Toc Icon">
-			</button>
+				<div class="page-default__wrapper">
+					<div class="page-default__content">
+						{{ content }}
+					</div>
+
+					<aside class="sidebar sidebar--right" id="right-sidebar">
+						<div class="sidebar__inner sidebar__inner--right">
+							<div class="toc">
+								<div class="toc__header">
+									<div class="toc__icon-wrapper">
+										<img src="/assets/icons/toc.svg" alt="Toc Icon">
+									</div>
+									<h2 class="toc__title">Contents</h2>
+									<button class="toc__btn" id="toc-btn-cross">
+										<img class="toc__cross" src="/assets/icons/cross.svg" alt="Toc Icon">
+									</button>
+								</div>
+								{% include toc-list.html html=content class="toc__list" %}
+							</div>
+						</div>
+					</aside>
+				</div>
+
+				<button class="toc-btn" id="toc-btn">
+					<img class="toc-btn__img" src="/assets/icons/toc.svg" alt="Toc Icon">
+				</button>
+			</div>
 		</div>
 	</body>
 	<script src="/assets/js/hamburger.js"></script>
