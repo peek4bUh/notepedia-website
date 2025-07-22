@@ -1,21 +1,40 @@
-$sm-screen: 40rem;  // 640px
-$md-screen: 48rem;  // 768px
-$lg-screen: 64rem;  // 1024px
-$xl-screen: 80rem;  // 1280px
-$xxl-screen: 96rem; // 1536px
+$sm: 30rem;   // 480px
+$md: 48rem;   // 768px
+$lg: 64rem;   // 1024px
+$xl: 80rem;   // 1280px
+$xxl: 96rem;  // 1536px
 
 
-@mixin tablet {
-  @media (min-width: $md-screen) {       
+@mixin sm-screen {
+  @media (min-width: $sm) {
     @content
   }
 }
 
-//@mixin laptop {
-//  @media (min-width: $lg-screen) {       
-//    @content
-//  }
-//
+@mixin md-screen {
+  @media (min-width: $md) {
+    @content
+  }
+}
+
+@mixin lg-screen {
+  @media (min-width: $lg) {
+    @content
+  }
+}
+
+@mixin xl-screen{
+  @media (min-width: $xl) {
+    @content
+  }
+}
+
+@mixin xxl-screen {
+  @media (min-width: $xxl) {
+    @content
+  }
+}
+
 //@media (min-width: 70rem) {
 //  .container {
 //    &__sidebar-left {

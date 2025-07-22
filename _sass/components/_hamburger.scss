@@ -6,11 +6,20 @@
   width: 2rem;
   height: 2rem;
   cursor: pointer;
+  border-radius: 0.25rem;
+
+  @include md-screen(){
+    display: none;
+  }
+
+  &:hover {
+    background-color: red;
+  }
 
   &__bar {
     width: 1.25rem;
     height: 0.125rem;
-    background-color: var(--primary-alt);
+    background-color: var(--border-color);
 
     &:first-child {
       margin-bottom: 0.3rem;
@@ -22,10 +31,3 @@
   }
 }
 
-
-// Breakpoints
-@media (min-width: 46.876rem) {
-  .hamburger {
-    display: none;
-  }
-}

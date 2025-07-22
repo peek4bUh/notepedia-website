@@ -1,5 +1,6 @@
 const setDarkMode = (active = false) => {
 	const root = document.querySelector(":root");
+
 	if (active) {
 		root.setAttribute("data-theme", "dark");
 		localStorage.setItem("theme", "dark");
@@ -10,9 +11,10 @@ const setDarkMode = (active = false) => {
 };
 
 const toggleDarkMode = () => {
-	const theme = document.querySelector(":root").getAttribute("data-theme");
-	// If the current theme is "light", we want to activate dark
-	setDarkMode(theme === "light");
+	const root = document.querySelector(":root");
+	const theme = root.getAttribute("data-theme");
+	const newTheme = theme === "light" ? "dark" : "light";
+	setDarkMode(newTheme === "dark");
 };
 
 const initDarkMode = () => {
@@ -37,5 +39,3 @@ const initDarkMode = () => {
 	const themeBtn = document.getElementById("themeBtn");
 	themeBtn.addEventListener("click", toggleDarkMode);
 };
-
-initDarkMode();

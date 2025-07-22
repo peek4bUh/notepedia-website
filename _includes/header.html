@@ -1,18 +1,21 @@
 <header class="header">
-	<div class="header__left-side">
-		{% include hamburger.html %}
-		<div class="left-side__info">
-			<img class="site-logo" src="/assets/icons/logo.svg" alt="Site Icon">
-			<a class="site-title" href="/">{{ site.title }}</a>
-		</div>
-	</div>
+	<div class="header__inner">
+		<a class="site" href="/">
+			<img class="site__logo" src="/assets/icons/logo.svg" alt="Notepedia Icon">
+			<div class="site__title">{{ site.title }}</div>
+		</a>
+		<div class="header__right-side">
+			<button class="btn-search">
+				<img src="/assets/icons/search.svg" alt="Search Icon">
+			</button>
 
-	<div class="header__right-side">
-		<button class="btn-search">
-			<img src="/assets/icons/search.svg" alt="Search Icon">
-		</button>
-		<button class="toc-btn" id="toc-btn">
-			<img src="/assets/icons/toc.svg" alt="Toc Icon">
-		</button>
+			{% include hamburger.html %}
+
+			<select id="theme-select" aria-label="Select theme" style="display: none;">
+				<option value="light">Light</option>
+				<option value="dark">Dark</option>
+				<option value="system">System</option>
+			</select>
+		</div>
 	</div>
 </header>

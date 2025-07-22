@@ -3,46 +3,50 @@
 
 $themes: (
   "light": (
-    "bg-primary": hsl(220, 14.29%, 95.88%),
-    "bg-primary-alt": hsl(220, 10%, 98%),
+    "bg-primary": #ffffff,
+    "bg-primary-alt": #f6f7f9,
 
     "text-normal": #111827,
-    "text-muted": #111827,
-    "text-accent": hsl(205, 100%, 40%),
+    "text-muted": #6b7280,
+    "text-accent": #0077cc,
 
-    "border-color": red,
+    "border-color": #e0e0e0,
 
-    "button-bg": hsl(202.75, 100%, 37%),
-    "button-bg-alt": hsl(202.75, 100%, 40%),
+    "button-bg": #0075bd,
+    "button-bg-alt": #007fcc,
 
-    "link": hsl(224, 100%, 65%),
+    "link": #4d7cff,
     "link-hover": green,
 
-    "theme-switcher-bg": hsl(205, 100%, 40%), 
-    "theme-switcher-text": hsl(220, 10%, 98%),
+    "theme-switcher-bg": #0077cc, 
+    "theme-switcher-text": #f9fafa,
 
-    "code-inline-bg": hsl(0, 0%, 20%)
+    "code-inline-bg": #edeef3,
+
+    "toc": #1c1d1d
   ),
   "dark": (
-    "bg-primary": hsl(0, 0%, 12%),
-    "bg-primary-alt": hsl(220, 10%, 98%),
+    "bg-primary": #1f1f1f,
+    "bg-primary-alt": #f9fafa,
 
-    "text-normal": #111827,
-    "text-muted": hsl(220, 10%, 90%),
-    "text-accent": hsl(254, 55%, 55%),
+    "text-normal": #e3e5e8,
+    "text-muted": #111827,
+    "text-accent": #7C60D9,
 
-    "button-bg": hsl(254, 55%, 55%),
-    "button-bg-alt": hsl(254, 55%, 60%),
+    "button-bg": #6b4dcb,
+    "button-bg-alt": #7b61d1,
 
-    "border-color": hsl(0, 0, 25%),
+    "border-color": #404040,
 
-    "link": hsl(224, 100%, 85%),
+    "link": #b3c7ff,
     "link-hover": #ffffff,
 
-    "theme-switcher-bg": hsl(254, 55%, 55%), 
-    "theme-switcher-text": hsl(220, 10%, 98%),
+    "theme-switcher-bg": #6b4dcb, 
+    "theme-switcher-text": #f9fafa,
 
-    "code-inline-bg": hsl(0, 0%, 20%)
+    "code-inline-bg": #333333,
+
+    "toc": #1c1d1d
   )
 );
 

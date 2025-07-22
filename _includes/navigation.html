@@ -1,13 +1,13 @@
 <ul class="navigation">
-  {% assign sorted_notes = site.notes | sort: "title" %}
-  {% for item in sorted_notes %}
-    <li class="navigation__item">
-      <a 
-        class="navigation__link"
-        href="{{ item.url }}">
-        {{ item.title }}
-      </a>
-    </li>
-  {% endfor %}
+	{% assign sorted_notes = site.notes | sort: "title" %}
+	{% for item in sorted_notes %}
+	<li class="navigation__item">
+		<a 
+			class="navigation__link {% if page.url == item.url %}navigation__link--active{% endif %}" 
+			href="{{ item.url }}">
+			{{ item.title }}
+		</a>
+	</li>
+	{% endfor %}
 </ul>
 

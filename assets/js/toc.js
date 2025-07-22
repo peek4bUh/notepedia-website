@@ -1,19 +1,25 @@
 const toc = document.getElementById('toc');
 const tocBtn = document.getElementById('toc-btn');
+const tocBtnCross = document.getElementById('toc-btn-cross');
 const rightSidebar = document.getElementById('right-sidebar');
 
 
 tocBtn.addEventListener('click', () => {
-	rightSidebar.classList.toggle('page-default__sidebar-right--active');
+	tocBtn.classList.add('toc-btn--hide');
+	rightSidebar.classList.add('sidebar--active');
 });
 
+tocBtnCross.addEventListener('click', () => {
+	tocBtn.classList.remove('toc-btn--hide');
+	rightSidebar.classList.remove('sidebar--active');
+});
 
 rightSidebar.querySelectorAll('a').forEach(link => {
 	link.addEventListener('click', () => {
-		rightSidebar.classList.toggle('page-default__sidebar-right--active');
+		rightSidebar.classList.toggle('sidebar--active');
+		tocBtn.classList.remove('toc-btn--hide');
 	})
 })
-
 
 document.addEventListener('DOMContentLoaded', () => {
 	if (!toc) return;
