@@ -17,10 +17,11 @@ html {
 body {
   background-color: var(--bg-primary);
   color: var(--text-normal);
+  font-size: 1.1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--text-normal);
+  color: var(--heading-h1);
 }
 
 a {
@@ -32,3 +33,6 @@ a {
   }
 }
 
+p {
+  line-height: var(--xs-p-line-height);
+}

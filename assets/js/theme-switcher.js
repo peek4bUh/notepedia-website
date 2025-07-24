@@ -39,3 +39,5 @@ const initDarkMode = () => {
 	const themeBtn = document.getElementById("themeBtn");
 	themeBtn.addEventListener("click", toggleDarkMode);
 };
+
+

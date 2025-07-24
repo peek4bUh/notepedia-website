@@ -8,7 +8,7 @@
     }
   }
 
-  &__pane {
+  &__frame {
     max-width: 1536px;
     margin: 0 auto;
 
@@ -29,7 +29,8 @@
 
   &__content {
     padding: var(--xs-content-pad);
-    max-width: 850px;
+    margin-inline: auto;
+    max-width: 800px;
 
     @include sm-screen(){
       padding: var(--sm-content-pad);
@@ -40,8 +41,9 @@
     }
 
     & h1 {
-      margin: 0;
-      font-size: --h1-size;
+      margin: 0 0 1.5rem;
+      font-size: var(--xs-h1-font-size);
+      line-height: var(--xs-h1-line-height);
     }
 
     & h2, h3, h4, h5, h6 {
@@ -58,18 +60,8 @@
     }
 
     & p {
-      padding: 0.75rem 0;
       color: var(--text-normal);
-      margin: 0;
-    }
-
-    & p:first-of-type {
-      padding-top: 1.5rem;
-    }
-
-    & p + p {
-      padding-top: 0.75rem;
-      padding-bottom: 0.75rem;
+      margin: 1.25rem 0;
     }
 
     & blockquote {
@@ -130,6 +122,7 @@
       @include md-screen(){
         width: 280px;
         border-right: 1px solid var(--border-color);
+        height: inherit;
       }
 
       @include lg-screen(){
@@ -163,7 +156,7 @@
       visibility: visible;
       width: auto;
       min-width: 280px;
-      height: calc(100vh - 3.125rem;);
+      height: calc(100vh - var(--md-navbar-height));
     }
   }
 
@@ -187,7 +180,7 @@
       background-color: var(--bg-primary);
       min-width: 280px;
       max-width: 300px;
-      height: calc(100vh - 3.125rem;);
+      height: calc(100vh - var(--md-navbar-height));
       flex: 1 calc((100vw - 600px) / 2);
       padding: 0;
       border: none;
@@ -210,22 +203,21 @@
     display: block;
     padding: 0.375rem 0.75rem;
     text-decoration: none;
-    color: var(--text-normal);
+    color: var(--text-muted);
     border-radius: 0.25rem;
     font-size: 0.875rem;
 
+    @include md-screen(){
+      font-size: 0.9125rem;
+    }
+
     &:hover {
-      color: #fff;
-      background-color: #4C3B87;
+      color: var(--text-normal);
     }
 
     &--active {
-      color: var(--text-accent);
-      font-weight: 600;
-
-      &:hover {
-        background-color: #5A47A5;
-      }
+      color: var(--clr-grey-dark);
+      font-weight: 700;
     }
   }
 }

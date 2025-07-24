@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
 		{% include header.html %}
 
 		<div class="page-default__container">
-			<div class="page-default__pane">
+			<div class="page-default__frame">
 				<aside class="sidebar sidebar--left" id="left-sidebar">
 					<div class="sidebar__inner sidebar__inner--left">
 						{% include navigation.html %}
@@ -26,18 +26,7 @@
 
 					<aside class="sidebar sidebar--right" id="right-sidebar">
 						<div class="sidebar__inner sidebar__inner--right">
-							<div class="toc">
-								<div class="toc__header">
-									<div class="toc__icon-wrapper">
-										<img src="/assets/icons/toc.svg" alt="Toc Icon">
-									</div>
-									<h2 class="toc__title">Contents</h2>
-									<button class="toc__btn" id="toc-btn-cross">
-										<img class="toc__cross" src="/assets/icons/cross.svg" alt="Toc Icon">
-									</button>
-								</div>
-								{% include toc-list.html html=content class="toc__list" %}
-							</div>
+							{% include toc.html %}
 						</div>
 					</aside>
 				</div>
@@ -50,11 +39,4 @@
 	</body>
 	<script src="/assets/js/hamburger.js"></script>
 	<script src="/assets/js/toc.js"></script>
-	<script src="/assets/js/theme-switcher.js"></script>
-	<script>
-	(function () {
-		const theme = localStorage.getItem("theme") || "light";
-		document.documentElement.setAttribute("data-theme", theme);
-	})();
-	</script>
 </html>

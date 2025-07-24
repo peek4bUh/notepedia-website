@@ -1,0 +1,10 @@
+{% if page.tags and page.tags.size > 0 %}
+<div >
+	<h2>Tags</h2>
+	<ul class="post-tags">
+		{% for tag in page.tags %}
+		<li><a>{{ tag }}</a></li>
+		{% endfor %}
+	</ul>
+</div>
+{% endif %}

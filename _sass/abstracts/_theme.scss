@@ -1,59 +1,55 @@
-/* https://codepen.io/barthy-koeln/pen/EBzxje */
-/* https://codepen.io/zetareticoli/pen/MROMZE */
+/* https://www.bram.us/2020/04/26/the-quest-for-the-perfect-dark-mode-using-vanilla-javascript/ */
+/* Light Color Scheme (Default + Override) */
+:root,
+:root[data-theme="light"] {
+	color-scheme: light dark;
+    --index-bg-primary: #f6f7f9;
+    --index-bg-primary-alt: #ffffff;
+    --bg-primary: #ffffff;
+    --bg-primary-alt: #f6f7f9;
+    --text-normal: #111827;
+    --text-muted: #6b7280;
+    --text-accent: #0077cc;
+    --border-color: #e0e0e0;
+    --btn-bg: #0075bd;
+    --btn-bg-alt: #007fcc;
+    --btn-text: #f6f7f9;
+    --btn-text-alt: #ffffff;
+    --link: #4d7cff;
+    --link-hover: #ffffff;
+    --theme-switcher-bg: #0077cc;
+    --theme-switcher-text: #f9fafa;
+    --code-inline-bg: #edeef3;
+    --toc: #1c1d1d;
+}
 
-$themes: (
-  "light": (
-    "bg-primary": #ffffff,
-    "bg-primary-alt": #f6f7f9,
+/* Dark Color Scheme (System Preference) */
+// @media (prefers-color-scheme: dark) {
+// 	:root {
+// 	}
+// }
 
-    "text-normal": #111827,
-    "text-muted": #6b7280,
-    "text-accent": #0077cc,
+/* Dark Color Scheme (Override) */
+:root[data-theme="dark"] {
+    --heading-h1: #f9fafa;
 
-    "border-color": #e0e0e0,
+    --text-normal: #e3e5e8;
+    --text-muted: #c1c3c8;
+    --text-accent: #7c60d9;
 
-    "button-bg": #0075bd,
-    "button-bg-alt": #007fcc,
-
-    "link": #4d7cff,
-    "link-hover": green,
-
-    "theme-switcher-bg": #0077cc, 
-    "theme-switcher-text": #f9fafa,
-
-    "code-inline-bg": #edeef3,
-
-    "toc": #1c1d1d
-  ),
-  "dark": (
-    "bg-primary": #1f1f1f,
-    "bg-primary-alt": #f9fafa,
-
-    "text-normal": #e3e5e8,
-    "text-muted": #111827,
-    "text-accent": #7C60D9,
-
-    "button-bg": #6b4dcb,
-    "button-bg-alt": #7b61d1,
-
-    "border-color": #404040,
-
-    "link": #b3c7ff,
-    "link-hover": #ffffff,
-
-    "theme-switcher-bg": #6b4dcb, 
-    "theme-switcher-text": #f9fafa,
-
-    "code-inline-bg": #333333,
-
-    "toc": #1c1d1d
-  )
-);
-
-@each $theme-name, $properties in $themes {
-  html[data-theme="#{$theme-name}"] {
-    @each $name, $property in $properties {
-      --#{$name}: #{$property};
-    }
-  }
+    --index-bg-primary: #1f1f1f;
+    --index-bg-primary-alt: #1c1d1d;
+    --bg-primary: #1f1f1f;
+    --bg-primary-alt: #f9fafa;
+    --btn-bg: #6b4dcb;
+    --btn-bg-alt: #7b61d1;
+    --btn-text: #f6f7f9;
+    --btn-text-alt: #ffffff;
+    --border-color: #404040;
+    --link: #b3c7ff;
+    --link-hover: #ffffff;
+    --theme-switcher-bg: #6b4dcb; 
+    --theme-switcher-text: #f9fafa;
+    --code-inline-bg: #333333;
+    --toc: #2d2e2f;
 }

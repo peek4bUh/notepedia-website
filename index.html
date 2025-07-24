@@ -1,7 +1,7 @@
 ---
 ---
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,35 +10,18 @@
 		<link rel="stylesheet" href="/assets/css/styles.css">
 	</head>
 	<body class="page-index">
-		{% include theme-switcher.html %}
-
 		<h1 class="page-index__title">Welcome to {{ site.title }}</h1>
-		<p class="page-index__desc">My personal knowledge management where you can find notes on various topics that interest me like pentesting, gaming, programming, computer science, etc...</p>
+		<p class="page-index__desc">
+			My personal knowledge management where you can find notes on various topics that interest me like pentesting, gaming, programming, computer science, etc...
+		</p>
 		<div class="page-index__container">
-			<div class="card">
-				<div class="card__title">📒 Notes</div>
-				<div class="card__desc">Personal notes, quick references, and learning summaries.</div>
-				{% assign sorted_notes = site.notes | sort: "title" %}
-				{% assign first_note = sorted_notes[0] %}
-				<a class="card__link" href="{{ first_note.url }}">Explore Notes</a>
-			</div>
-			<div class="card">
-				<div class="card__title">📝 Blog Posts</div>
-				<div class="card__desc">Thoughts, tutorials, and long-form articles I've written.</div>
-				<a class="card__link" href="/blog/">Read Posts</a>
-			</div>
+			{% include card.html emoji="📒" title="Notes" desc="Personal notes, quick references, and learning summaries." link="/notes/welcome" linktext="Explore Notes" %}
+			
+			{% include card.html emoji="📝" title="Blog Posts" desc="Thoughts, tutorials, and long-form articles I've written." link="/blog/" linktext="Read Posts" %}
 		</div>
 
 		<footer class="page-index__footer">
-			This site is powered by <a href="https://jekyllrb.com/">Jekyll</a>.
+			{% include copyright.html %}
 		</footer>
-
-		<script src="/assets/js/theme-switcher.js"></script>
-		<script>
-			(function () {
-				const theme = localStorage.getItem("theme") || "light";
-				document.documentElement.setAttribute("data-theme", theme);
-			})();
-		</script>
 	</body>
 </html>

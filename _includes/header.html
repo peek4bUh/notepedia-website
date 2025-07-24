@@ -1,8 +1,8 @@
 <header class="header">
 	<div class="header__inner">
 		<a class="site" href="/">
-			<img class="site__logo" src="/assets/icons/logo.svg" alt="Notepedia Icon">
-			<div class="site__title">{{ site.title }}</div>
+			{% include logo.html %}
+			<h2 class="site__title">Notes</h2>
 		</a>
 		<div class="header__right-side">
 			<button class="btn-search">
@@ -10,12 +10,6 @@
 			</button>
 
 			{% include hamburger.html %}
-
-			<select id="theme-select" aria-label="Select theme" style="display: none;">
-				<option value="light">Light</option>
-				<option value="dark">Dark</option>
-				<option value="system">System</option>
-			</select>
 		</div>
 	</div>
 </header>
