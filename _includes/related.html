@@ -1,0 +1,52 @@
+{% comment %}
+  1) Split the raw markdown on "## Related".  
+     If there’s more than one chunk, we found it.
+  2) Take everything after the heading (parts[1]), strip leading/trailing whitespace
+     then split into lines.
+  3) Loop each line—if it starts with “- ” we collect it; the moment it doesn’t,
+     we break out of the loop.
+{% endcomment %}
+
+{% assign lines = page.content | split: "\n" %}
+{% assign in_related = false %}
+{% assign related_items = "" | split: "" %}
+
+{% for raw in lines %}
+  {% assign line = raw | strip %}
+
+  {%- comment -%}
+    If we see the heading, turn on “in_related” and skip to the next line
+  {%- endcomment -%}
+  {% if line == "## Related" %}
+    {% assign in_related = true %}
+    {% continue %}
+  {% endif %}
+
+  {%- comment -%}
+    If we were in the Related section, collect bullets or stop
+  {%- endcomment -%}
+  {% if in_related %}
+    {%- comment -%}
+      If this line is a list item, grab it.
+      As soon as we hit something that’s not “- …” or blank, we end the section.
+    {%- endcomment -%}
+    {% if line == "" or line startswith "## " %}
+      {% assign in_related = false %}
+    {% elsif line startswith "- " %}
+      {% assign related_items = related_items | push: line | uniq %}
+    {% else %}
+      {% assign in_related = false %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% if related_items.size > 0 %}
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      {% for item in related_items %}
+        <li>{{ item | remove_first: "- " | strip }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

@@ -1,14 +1,21 @@
+# _config.yml
 title: Notepedia
 
 collections:
   notes:
     output: true
-    permalink: /notes/:name
+    permalink: /notes/:name/
+
+permalink: /blog/:year/:month/:day/:title/
 
 defaults:
   - scope:
-      path: ""
       type: notes
     values:
       layout: default
+  - scope:
+      type: posts
+    values:
+      layout: post
+
 

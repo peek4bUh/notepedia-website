@@ -1,7 +1,7 @@
 {% if page.tags and page.tags.size > 0 %}
-<div >
-	<h2>Tags</h2>
-	<ul class="post-tags">
+<div class="tags">
+	<h2 class="tags__title">Tags</h2>
+	<ul class="tags__list">
 		{% for tag in page.tags %}
 		<li><a>{{ tag }}</a></li>
 		{% endfor %}

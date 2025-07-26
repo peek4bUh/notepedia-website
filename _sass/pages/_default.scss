@@ -52,11 +52,11 @@
     }
 
     & h2 {
-      font-size: --h2-size;
+      font-size: var(--xs-h2-font-size);
     }
 
     & h3 {
-      font-size: --h3-size;
+      font-size: var(--xs-h3-font-size);
     }
 
     & p {
@@ -69,7 +69,7 @@
     }
 
     & code {
-      background-color: var(--code-inline-bg);
+      background-color: var(--surface-10);
       padding: 1px 0.25rem;
       border-radius: 0.25rem;
     }
@@ -88,14 +88,13 @@
 .sidebar {
   position: fixed;
   width: 100vw;
-  background-color: var(--bg-primary);
+  background-color: var(--surface-00);
   visibility: hidden;
 
   @include lg-screen(){
     position: relative;
     top: 0;
-    z-index: 0;
-    background-color: var(--bg-primary);
+    z-index: auto;
     visibility: visible;
     width: auto;
     min-width: 280px;
@@ -121,12 +120,7 @@
 
       @include md-screen(){
         width: 280px;
-        border-right: 1px solid var(--border-color);
         height: inherit;
-      }
-
-      @include lg-screen(){
-        border-right: none;
       }
     }
 
@@ -152,7 +146,6 @@
       position: relative;
       top: 0;
       z-index: 0;
-      background-color: var(--bg-primary);
       visibility: visible;
       width: auto;
       min-width: 280px;
@@ -164,10 +157,10 @@
     position: absolute;
     top: 1.5rem;
     left: 50%;
-    background-color: var(--toc);
+    background-color: var(--surface-05);
     width: calc(100% - var(--xs-toc-margin-x));
     transform: translateX(-50%);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--surface-10);
     border-radius: 0.375rem;
     padding: 0;
 
@@ -198,6 +191,8 @@
   padding: 0.5rem;
   list-style-type: none;
   line-height: 1.25rem;
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
 
   &__link {
     display: block;
@@ -225,7 +220,6 @@
 /* Container around the code block */
 .highlight {
   overflow-x: auto;
-  padding: 1rem;
 
   & pre {
     border-radius: 4px;
@@ -236,6 +230,7 @@
     font-size: 0.9rem;
     line-height: 1.5;
     color: #f8f8f2;
+    padding: 1rem;
   }
 
   & code {
@@ -245,3 +240,4 @@
     color: inherit;
   }
 }
+

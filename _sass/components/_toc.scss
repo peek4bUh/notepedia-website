@@ -1,54 +1,28 @@
 .toc {
-  padding: 0.375rem 0.75rem;
+  padding: 0.75rem 1.25rem;
 
   @include lg-screen(){
     padding: 0 0 0 1rem;
-    border-left: 1px solid var(--border-color);
+    border-left: 1px solid var(--surface-10);
   }
 
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.375rem;
-    border-bottom: 1px solid var(--border-color);
 
     @include lg-screen(){
-      border-bottom: none;
       margin-bottom: 0.75rem;
-    }
-  }
-
-  &__icon-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    margin-left: -0.75rem;
-    padding-top: 0.125rem;
-
-    @include lg-screen(){
-      display: none;
-    }
-
-    img {
-      width: 22px;
     }
   }
 
   &__title {
     margin: 0;
     flex: 1;
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: #c8ccd0;
-
-    @include lg-screen(){
-      font-size: 0.9375rem;
-
-    }
+    color: var(--text-normal);
   }
 
   &__btn {
@@ -70,7 +44,7 @@
   }
 
   &__list {
-    margin: 0 0.75rem 0 1.875rem;
+    margin: 0;
     padding: 0;
     list-style-type: none;
 
@@ -84,6 +58,11 @@
 
     & > li ul{
       padding-left: 1rem;
+      border-left: 1px solid var(--surface-10);
+
+      @include lg-screen(){
+        border-left: none;
+      }
     }
 
     & ul {
@@ -92,7 +71,7 @@
 
     & a {
       display: block;
-      color: hsl(224, 0%, 77%);
+      color: var(--text-muted);
       text-decoration: none;
       padding: 0.3125rem 0;
       font-size: 0.875rem;
@@ -108,19 +87,19 @@
   position: fixed;
   top: calc(1.5rem + var(--xs-navbar-height));
   right: -1.25rem;
-  width: 3.75rem;
-  height: 3.75rem;
+  width: 60px;
+  height: 60px;
   padding-left: 0.625rem;
   padding-right: 0;
-  background-color: var(--toc);
+  background-color: var(--surface-05);
   border-radius: 12.5%;
+  border: 1px solid var(--surface-10);
   display: flex;
   align-items: center;
   color: #fff;
   font-size: 1.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
   cursor: pointer;
-  border: 1px solid var(--border-color);
 
   @include lg-screen(){
     display: none;

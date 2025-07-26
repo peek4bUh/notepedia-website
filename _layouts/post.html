@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{ page.title }} | {{ site.title }}</title>
+		<link rel="icon" href="/assets/icons/logo.svg">
+		<link rel="stylesheet" href="/assets/css/styles.css">
+	</head>
+
+	<body class="post">
+		{% include header.html %}
+
+		<p>Example</p>
+		<ul>
+			{% for post in site.posts %}
+			<li>
+				<a href="{{ post.url }}">{{ post.title }}</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</body>
+</html>
