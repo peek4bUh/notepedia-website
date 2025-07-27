@@ -1,21 +1,24 @@
-# _config.yml
+#_https://jekyllrb.com/docs/configuration/front-matter-defaults
+
 title: Notepedia
 
 collections:
   notes:
     output: true
-    permalink: /notes/:name/
-
-permalink: /blog/:year/:month/:day/:title/
+    permalink: /notes/:name
+  blog:
+    output: true
+    permalink: /blog/posts/:name
 
 defaults:
   - scope:
+      path: ""
       type: notes
     values:
-      layout: default
+      layout: note
   - scope:
-      type: posts
+      path: ""
+      type: blog
     values:
       layout: post
-
 

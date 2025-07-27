@@ -1,0 +1,38 @@
+.page-blog {
+  padding-top: var(--xs-navbar-height);
+
+  &__container {
+    padding: var(--xs-content-pad);
+  }
+
+  &__title {
+    margin: 0 0 2.5rem;
+    font-size: var(--xs-h1-font-size);
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+
+  &__time,
+  &__link {
+    display: block;
+  }
+
+  &__time {
+    min-width: 120px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var(--link);
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,30 @@
+---
+permalink: /blog/posts
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Blog | {{ site.title }}</title>
+		<link rel="icon" href="/assets/icons/logo.svg">
+		<link rel="stylesheet" href="/assets/css/styles.css">
+	</head>
+
+	<body class="page-blog">
+		{% include header.html title="Blog" %}
+
+		<main class="page-blog__container">
+			<h1 class="page-blog__title">Latest Posts</h1>
+			<ul class="page-blog__list">
+				{% assign posts = site.blog | sort: 'date' | reverse %}
+				{% for post in posts %}
+				<li class="page-blog__item">
+					<time class="page-blog__time">{{ post.date | date: "%Y-%m-%d" }}</time>
+					<a class="page-blog__link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</main>
+	</body>
+</html>

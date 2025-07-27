@@ -184,6 +184,9 @@
   &--active {
     visibility: visible;
   }
+
+
+    padding: var(--xs-content-pad);
 }
 
 .navigation {
@@ -240,4 +243,5 @@
     color: inherit;
   }
 }
+
 

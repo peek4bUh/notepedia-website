@@ -1,15 +1,9 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{{ page.title }} | {{ site.title }}</title>
-		<link rel="icon" href="/assets/icons/logo.svg">
-		<link rel="stylesheet" href="/assets/css/styles.css">
-	</head>
+	{% include head.html %}
 
 	<body class="page-default">
-		{% include header.html %}
+		{% include header.html title="Notes" %}
 
 		<div class="page-default__container">
 			<div class="page-default__frame">
