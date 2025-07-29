@@ -2,19 +2,19 @@
 <html lang="en">
 	{% include head.html %}
 
-	<body class="page-note" id="page-note">
+	<body class="page-default">
 		{% include header.html title="Notes" %}
 
-		<div class="page-note__wrapper">
-			<div class="page-note__frame">
+		<div class="page-default__container">
+			<div class="page-default__frame">
 				<aside class="sidebar sidebar--left" id="left-sidebar">
 					<div class="sidebar__inner sidebar__inner--left">
 						{% include navigation.html %}
 					</div>
 				</aside>
 
-				<div class="page-note__container">
-					<div class="page-note__content">
+				<div class="page-default__wrapper">
+					<div class="page-default__content">
 						{{ content }}
 					</div>
 

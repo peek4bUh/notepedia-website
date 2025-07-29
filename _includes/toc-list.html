@@ -54,8 +54,6 @@
             generate the table of contents and will NOT output the markdown given to it
     {% endcomment %}
 
-		<h2 class="sidebar">Tableasdfas of Contents</h2>
-
     {% capture newline %}
     {% endcapture %}
     {% assign newline = newline | rstrip %} <!-- Remove the extra spacing but preserve the newline -->
@@ -75,7 +73,7 @@
     {% assign flatToc = include.flat_toc | default: false %}
     {% assign baseURL = include.base_url | default: include.baseurl | default: '' %}
     {% assign skipNoIDs = include.skip_no_ids | default: include.skipNoIDs | default: false %}
-    {% assign minHeader = include.h_min | default: 1 %}
+    {% assign minHeader = include.h_min | default: 2 %}
     {% assign maxHeader = include.h_max | default: 6 %}
     {% assign nodes = include.html | strip | split: '<h' %}
 

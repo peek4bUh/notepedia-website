@@ -1,6 +1,10 @@
-.page-default {
+.page-note {
 
-  &__container {
+  &--no-scroll {
+    overflow-y: hidden;
+  }
+
+  &__wrapper {
     padding-top: var(--xs-navbar-height);
 
     @include sm-screen(){
@@ -11,13 +15,23 @@
   &__frame {
     max-width: 1536px;
     margin: 0 auto;
+    padding: var(--xs-content-pad);
 
     @include sm-screen(){
       display: flex;
+      padding-left: 300px;
+    }
+
+    @include md-screen(){
+      padding-right: 1.5rem;
+    }
+
+    @include lg-screen(){
+      padding-left: 2rem;
     }
   }
 
-  &__wrapper {
+  &__container {
     position: relative;
 
     @include md-screen(){
@@ -28,20 +42,15 @@
   }
 
   &__content {
-    padding: var(--xs-content-pad);
     margin-inline: auto;
     max-width: 800px;
 
-    @include sm-screen(){
-      padding: var(--sm-content-pad);
-    }
-
-    @include lg-screen(){
-      padding: var(--lg-content-pad);
+    @include md-screen(){
+      padding-left: 2.5rem;
     }
 
     & h1 {
-      margin: 0 0 1.5rem;
+      margin: 1rem 0 1.5rem;
       font-size: var(--xs-h1-font-size);
       line-height: var(--xs-h1-line-height);
     }
@@ -92,20 +101,11 @@
   visibility: hidden;
 
   @include lg-screen(){
-    position: relative;
-    top: 0;
-    z-index: auto;
     visibility: visible;
-    width: auto;
-    min-width: 280px;
+    width: 280px;
   }
 
   &__inner {
-    padding: 1.25rem 1rem;
-
-    @include md-screen(){
-      border-right: none;
-    }
 
     @include lg-screen(){
       position: fixed;
@@ -114,12 +114,9 @@
     }
 
     &--left {
-      position: fixed;
-      width: 100%;
       height: 100%;
 
-      @include md-screen(){
-        width: 280px;
+      @include lg-screen(){
         height: inherit;
       }
     }
@@ -140,16 +137,25 @@
     top: var(--xs-navbar-height);
     left: 0;
     height: calc(100vh - var(--xs-navbar-height));
-    z-index: 100;
+    z-index: 5;
+    padding: 1.25rem 0 1.25rem 1.25rem;
+
+    @include sm-screen(){
+      top: var(--sm-navbar-height);
+    }
 
     @include md-screen(){
-      position: relative;
-      top: 0;
-      z-index: 0;
       visibility: visible;
-      width: auto;
-      min-width: 280px;
+      width: 300px;
       height: calc(100vh - var(--md-navbar-height));
+      padding: 2rem 0 2rem 1.5rem;
+    }
+
+    @include lg-screen(){
+      position: static;
+      padding: 0;
+      width: 280px;
+      z-index: auto;
     }
   }
 
@@ -185,29 +191,28 @@
     visibility: visible;
   }
 
-
-    padding: var(--xs-content-pad);
 }
 
 .navigation {
   margin: 0;
-  padding: 0.5rem;
+  padding: 0 1.5rem 0 1rem;
   list-style-type: none;
   line-height: 1.25rem;
-  max-height: calc(100vh - 110px);
+  height: inherit;
   overflow-y: auto;
+
+  @include md-screen(){
+    padding-left: 0;
+  }
 
   &__link {
     display: block;
-    padding: 0.375rem 0.75rem;
+    padding: 0.375rem 0;
+    margin-bottom: 0.125rem;
     text-decoration: none;
     color: var(--text-muted);
     border-radius: 0.25rem;
-    font-size: 0.875rem;
-
-    @include md-screen(){
-      font-size: 0.9125rem;
-    }
+    font-size: 0.9375rem;
 
     &:hover {
       color: var(--text-normal);
