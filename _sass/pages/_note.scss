@@ -15,15 +15,14 @@
   &__frame {
     max-width: 1536px;
     margin: 0 auto;
-    padding: var(--xs-content-pad);
 
     @include sm-screen(){
       display: flex;
-      padding-left: 300px;
     }
 
     @include md-screen(){
       padding-right: 1.5rem;
+      padding-left: 300px;
     }
 
     @include lg-screen(){
@@ -44,6 +43,7 @@
   &__content {
     margin-inline: auto;
     max-width: 800px;
+    padding: var(--xs-content-pad);
 
     @include md-screen(){
       padding-left: 2.5rem;
