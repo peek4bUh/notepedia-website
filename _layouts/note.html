@@ -6,14 +6,21 @@
 		{% include header.html title="Notes" %}
 
 		<div class="page-note__wrapper">
-			<div class="page-note__frame">
-				<aside class="sidebar sidebar--left" id="left-sidebar">
-					<div class="sidebar__inner sidebar__inner--left">
-						{% include navigation.html %}
+			<div class="page-note__container">
+				<aside class="navigation" id="left-sidebar">
+					<div class="navigation__wrapper">
+						<ul class="navigation__list">
+							{% assign sorted_notes = site.notes | sort: "title" %}
+							{% for item in sorted_notes %}
+							<li class="navigation__item">
+								<a class="navigation__link" href="{{ item.url }}">{{ item.title }}</a>
+							</li>
+							{% endfor %}
+						</ul>
 					</div>
 				</aside>
 
-				<div class="page-note__container">
+				<div class="page-note__frame">
 					<div class="page-note__content">
 						{{ content }}
 					</div>

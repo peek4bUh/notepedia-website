@@ -1,9 +1,9 @@
-const hamburger = document.getElementById('hamburger');
-
-hamburger.addEventListener('click', function() {
-	const pageNote = document.body;
+document.getElementById('hamburger').addEventListener('click', function() {
 	const leftSidebar = document.getElementById('left-sidebar');
+	const pageNote = document.getElementById('page-note');
+	const hamburger = this;
 
+	leftSidebar.classList.toggle('navigation--active');
 	pageNote.classList.toggle('page-note--no-scroll');
-	leftSidebar.classList.toggle('sidebar--active');
+	hamburger.classList.toggle('active');
 });
