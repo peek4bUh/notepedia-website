@@ -3,6 +3,8 @@
 
   &__container {
     padding: var(--xs-content-pad);
+    max-width: 1536px;
+    margin-inline: auto;
   }
 
   &__title {
@@ -34,5 +36,18 @@
     text-decoration: none;
     color: var(--link);
     font-weight: 700;
+  }
+}
+
+.page-blog .post {
+  background-color: var(--surface-05);
+  border: 1px solid var(--surface-10);
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+
+  &__title {
+    font-size: 1.375rem;
+    color: white;
   }
 }

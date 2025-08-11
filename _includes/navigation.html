@@ -1,12 +1,17 @@
-<ul class="navigation">
-	{% assign sorted_notes = site.notes | sort: "title" %}
-	{% for item in sorted_notes %}
-	<li class="navigation__item">
-		<a 
-			class="navigation__link {% if page.url == item.url %}navigation__link--active{% endif %}" 
-			href="{{ item.url }}">
-			{{ item.title }}
-		</a>
-	</li>
-	{% endfor %}
-</ul>
+{% if page.url contains '/notes/' %}
+	{% assign items = site.notes | sort: "title" %}
+{% elsif page.url contains '/posts/' %}
+	{% assign items = site.blog | sort: 'date' | reverse %}
+{% endif %}
+
+<aside class="navigation" id="left-sidebar">
+	<div class="navigation__wrapper">
+		<ul class="navigation__list">
+			{% for item in items %}
+			<li class="navigation__item">
+				<a class="navigation__link" href="{{ item.url }}">{{ item.title }}</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</aside>

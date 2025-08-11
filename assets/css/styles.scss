@@ -13,9 +13,10 @@
 @import 'components/hamburger';
 @import "components/toc";
 @import "components/tags";
+@import "components/context";
 
 @import "layouts/header";
 
 @import "pages/index";
-@import "pages/note";
+@import "pages/default";
 @import "pages/blog";

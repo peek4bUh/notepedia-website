@@ -34,9 +34,9 @@ The following conventions apply to the **SYNOPSIS** section and can be used as a
 | argument ...             | Argument is repeatable.                            |
 | \[expression\] ...       | Entire expression within `[]` is repeatable.       |
 
-Exact rendering may vary depending on the output device. For instance, `man` will usually _not be able to render italics when running in a terminal_, and _will typically use underlined or coloured text instead_.
+Exact rendering may vary depending on the output device. For instance, `man` will usually not be able to render italics when running in a terminal, and will typically use underlined or coloured text instead.
 
-## References
+## Sources
 
-- _Wikipedia_. (2024, June 17). <span class="reference-title">Man page</span>. [https://en.wikipedia.org/wiki/Man_page](https://en.wikipedia.org/wiki/Man_page)
-- _man_. manned.org. [https://www.man7.org/linux/man-pages/man1/man.1.html](https://www.man7.org/linux/man-pages/man1/man.1.html)
+- Wikipedia. (2024, June 17). <span class="reference-title">Man page</span>. [https://en.wikipedia.org/wiki/Manpage](https://en.wikipedia.org/wiki/Manpage)
+- man. manned.org. [https://www.man7.org/linux/man-pages/man1/man.1.html](https://www.man7.org/linux/man-pages/man1/man.1.html)

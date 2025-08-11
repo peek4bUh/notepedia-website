@@ -1,0 +1,25 @@
+.context {
+  display: none;
+  padding: 0 0 0 1rem;
+  border-left: 1px solid var(--surface-10);
+  margin-bottom: 2.25rem;
+
+  @include lg-screen(){
+    display: block;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-normal);
+    margin-bottom: 0.75rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var(--link);
+    font-size: 0.875rem;
+  }
+}

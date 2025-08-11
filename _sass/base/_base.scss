@@ -21,11 +21,16 @@ body {
 
 a {
   color: var(--link);
-  text-decoration: underline;
   
   &:hover {
     color: var(--link-alt);
   }
+}
+
+a[href^="/"],
+a[href^="./"],
+a[href*="://example.com"] {
+  text-decoration: none;
 }
 
 p {

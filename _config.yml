@@ -5,20 +5,20 @@ title: Notepedia
 collections:
   notes:
     output: true
-    permalink: /notes/:name
+    permalink: /notes/:title
   blog:
     output: true
-    permalink: /blog/posts/:name
+    permalink: /posts/:title
 
 defaults:
   - scope:
       path: ""
       type: notes
     values:
-      layout: note
+      layout: default
   - scope:
       path: ""
       type: blog
     values:
-      layout: post
+      layout: default
 

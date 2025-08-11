@@ -2,24 +2,23 @@
 <html lang="en">
 	{% include head.html %}
 
-	<body class="page-default">
-		{% include header.html title="Notes" %}
+	<body class="default" id="page-note">
+		{% include header.html %}
 
-		<div class="page-default__container">
-			<div class="page-default__frame">
-				<aside class="sidebar sidebar--left" id="left-sidebar">
-					<div class="sidebar__inner sidebar__inner--left">
-						{% include navigation.html %}
-					</div>
-				</aside>
+		<div class="default__wrapper">
+			<div class="default__container">
+				{% include navigation.html %}
 
-				<div class="page-default__wrapper">
-					<div class="page-default__content">
+				<div class="default__frame">
+					<div class="default__content">
 						{{ content }}
 					</div>
 
 					<aside class="sidebar sidebar--right" id="right-sidebar">
 						<div class="sidebar__inner sidebar__inner--right">
+							{% include sublinks.html name="context" %}
+							{% include sublinks.html name="related" %}
+							{% include sublinks.html name="see-also" %}
 							{% include toc.html %}
 						</div>
 					</aside>
